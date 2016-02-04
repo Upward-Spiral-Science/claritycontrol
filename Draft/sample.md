@@ -4,10 +4,10 @@
 -------------
 
 #### Opportunity
-The 
+There is currently no cost-efficient method to analyze structural differences between brain in different states. Brains imaged using Clarity analysis might be able to point towards these structural differences. 
 
 #### Significance
-
+Structural differences in the brain can offer valuable information that can lead to a better understanding of the brain under different states.
 
 ####Feasibility
 Clarity analysis has been documented, and while it might not yet be feasible to make exact causal claims, general trends can be noted.
