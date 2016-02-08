@@ -1,14 +1,14 @@
 ###Questions About my Project
 
-We have D datasets, each dataset contains 3D image data I=G(X,Y,Z) in gray scale.
+We have 'D' datasets with each dataset containing 3D image data I=G(X,Y,Z), in gray scale.
 
-R is the resolution level of a 3D image data I, it can be set from 1 to 5.
+'R' is the resolution level of the 3D image data I. It can be set from 1 to 5.
 
-We know that gray scale image contains values form 0 to 255 for each pixel.
+We know that gray scale images contain values form 0 to 255 for each pixel.
 
-Each dimension X,Y,Z of image data I has seperate ranges and offsets.
+Each dimension X,Y,Z of the image data I has seperate ranges and offsets.
 
-T is a histogram of a data, which is table of counting the times a value appears in image datasets.
+'T' is a histogram of the data, which is a count of the number of times a value appears in image datasets.
 
 **Descriptive** <br />
 
@@ -20,7 +20,7 @@ T is a histogram of a data, which is table of counting the times a value appears
 
 **Exploratory** <br />
 
-* Can normalized histograms create meaningful data for the clarity brains?
+* Can normalized histograms create meaningful data for the CLARITY brains?
 * Do we need to segment the image data? 
 * How do we perform segmentation?
 * How does the resolution effect our project?
