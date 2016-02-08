@@ -49,6 +49,6 @@ Each dimension X,Y,Z of the image data I has seperate ranges and offsets.
 
 **Mechanistic** <br />
 
-* How does a difference in gene make a difference of reaction within brain structures, given the identical external conditions?
+* How does a difference in the state of the subject (normal/diseased) make a difference in the structure of the brain?
 
 
