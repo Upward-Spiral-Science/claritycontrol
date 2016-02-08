@@ -13,8 +13,7 @@ Psychiatric disease represents the leading cause of disability both in the U.S. 
 In preserving the full continuity of neuronal structures, CLARITY not only allows tracing of individual neural connections over long distances through the brain, but also provides a way to gather rich, molecular information describing a cell's function that is not possible with other methods[2]. In this project, we expect to establish at least one parametric structural difference in response to fear between normal and diseased brains. Although CLARITY data is of immense benefit to the field of neuroscience, turning massive amounts of data into useful insight poses immense computational challenges that we will have to address. 
 
 ####Innovation
-If successful, this project will reveal the structural differences between brains in different states.  
-
+The project investigates data that hasn’t been examined much before. If successful, we will be able to establish distinguishable parameters in the structure of the brain between normal and diseased subjects. The solution can then be iterated for different cases of behavior such as anxiety and depression. The possibilities resulting out the success of this project are truly endless.  
 
 ####References
 1.	http://www.nature.com/nmeth/journal/v10/n6/full/nmeth.2477.html
