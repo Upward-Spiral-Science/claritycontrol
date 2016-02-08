@@ -25,7 +25,7 @@ T is a histogram of a data, which is table of counting the times a value appears
 * How do we perform segmentation?
 * How does the resolution effect our project?
 * What is the best resolution for our 3D image - balancing precision and recall?
-
+* If p_x(i)=p(x=i)=n_i/n where 0<=i<L, then which normalization technique is best?
 
 **Inferential** <br />
 
@@ -39,7 +39,6 @@ T is a histogram of a data, which is table of counting the times a value appears
 * What kind of regression do we need to run?
 * Given a condition, can we predict the reaction within brain structures? Or reverse?
 * How do we mathematically represent our results?
-* 
 
 **Causal** <br />
 
@@ -51,5 +50,5 @@ T is a histogram of a data, which is table of counting the times a value appears
 **Mechanistic** <br />
 
 * How does a difference in gene make a difference of reaction within brain structures, given the identical external conditions?
-* 
+
 
