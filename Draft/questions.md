@@ -1,5 +1,6 @@
 ###Questions About my Project
 
+We have D datasets, each 
 
 **Descriptive** <br />
 What assumptions do we need to make before analyzing our data
