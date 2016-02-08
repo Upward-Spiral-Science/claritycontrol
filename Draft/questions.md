@@ -14,16 +14,17 @@ T is a histogram of a data, which is table of counting the times a value appears
 
 * What assumptions do we need to make before analyzing our data?
 * What is the meaning of three dimensions in a 3D image dataset?
-* What is the resolution of a 3D image?
-* The size of our datasets?
+* The best size of our datasets for experimentation?
 * What is the histogram of a 3D image?
 * How sparse are the images (ratio of pixels with value 0 over size of the image)?
 
 **Exploratory** <br />
 
 * Can normalized histograms create meaningful data for the clarity brains?
-* Do we need to segment the image data and how to perform segmentation?
+* Do we need to segment the image data? 
+* How do we perform segmentation?
 * How does the resolution effect our project?
+* What is the best resolution for our 3D image - balancing precision and recall?
 
 
 **Inferential** <br />
@@ -31,18 +32,24 @@ T is a histogram of a data, which is table of counting the times a value appears
 * Can clustering reveal trends about our data?
 * What conditions do we need to control to make an inference?
 * Is there any specific range to determine a certain brain structure?
+* What kind of computational models should we use?
 
 **Predictive** <br />
 
 * What kind of regression do we need to run?
 * Given a condition, can we predict the reaction within brain structures? Or reverse?
+* How do we mathematically represent our results?
+* 
 
 **Causal** <br />
 
 * What do we need to prove in order to make a causal claim?
-* How does emotions or environment influence the reaction within a certain structure of the brain?
+* How does state or environment influence the reaction within a certain structure of the brain?
+* With only ten brains how do we validate associational assumptions?
+* Does P(Y = y|set(X = x)) reveal causal directionality?
 
 **Mechanistic** <br />
 
-* How does a difference in gene could make a difference of reaction within brain structures, given the identical external conditions?
+* How does a difference in gene make a difference of reaction within brain structures, given the identical external conditions?
+* 
 
