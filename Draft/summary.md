@@ -4,10 +4,10 @@
 -------------
 
 #### Opportunity
-There is currently no cost-efficient method to analyze structural differences between brain in different states. Brains imaged using Clarity analysis might be able to point towards these structural differences. 
+Imaging the brain has evolved over the years in scale and resolution from the macroscopic to the microscopic range. It has transitioned from studies of the human brain by magnetic resonance imaging to reconstructing dense neural circuits in small volumes of brain tissue by electron microscopy [1].  Reconstruction from thin sections is limited to small volumes of tissue. CLARITY is a method for chemical transformation of intact biological tissues into a hydrogel-tissue hybrid, which can be studied under light and macromolecular labels while retaining fine structure and native biological molecules. CLARITY will allow rapid extraction of systems information (dynamics, history, wiring, and molecular phenotypes) from large and intact biological tissues or organs without disassembly, down to millisecond-scale and cellular resolution [2]. Analyzing CLARITY data will provide the much-needed across-scales standardization on a global perspective that may lead to fundamental insights into psychiatric disease.
 
 #### Significance
-Structural differences in the brain can offer valuable information that can lead to a better understanding of the brain under different states.
+Psychiatric disease represents the leading cause of disability both in the U.S. and worldwide [3]. Many major pharmaceutical companies are closing down psychiatry programs due to the lack of neural circuit-level understanding of disease-related states such as fear and reward, which impairs identification of targets for treatment [2]. Visualization of neural projections linked to causality information and molecular descriptors will deepen our understanding of the neural structural dynamics that underlie behavior, although so far slicing or ablative electron microscopy and array tomography methods [4][1][ 5] are not readily linkable with causal information on the behavioral significance of the connections. It is important to observe fine details of symptomatic brains without losing larger-scale circuit perspective. The efforts made to study CLARITY models has the potential to influence the lives of millions of people across the globe. 
 
 ####Feasibility
 Clarity analysis has been documented, and while it might not yet be feasible to make exact causal claims, general trends can be noted.
@@ -17,8 +17,12 @@ If successful, this project will reveal the structural differences between brain
 
 
 ####References
-  - [NTR] http://www.nature.com/nrd/journal/v10/n9/full/nrd3439-c1.html
-  - [CEL] http://www.cell.com/cell/abstract/S0092-8674(15)01623-2?_returnURL=http%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867415016232%3Fshowall%3Dtrue
+1.	http://www.nature.com/nmeth/journal/v10/n6/full/nmeth.2477.html
+2.	http://www.nature.com/nprot/journal/v9/n7/full/nprot.2014.123.html
+3.	https://www.nami.org/Learn-More/Mental-Health-By-the-Numbers
+4.	http://science.sciencemag.org/content/334/6056/618
+5.	http://www.sciencedirect.com/science/article/pii/S0896627307004412
+
 
 
 ------------
