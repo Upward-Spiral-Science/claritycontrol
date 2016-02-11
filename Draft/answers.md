@@ -17,8 +17,13 @@ T is a histogram of a data, which is table of counting the times a value appears
 * What is the meaning of three dimensions in a 3D image dataset?
   * 3 dimensions - 3 spatial axes X Y Z
 * What is the resolution of a 3D image? 
+  *  The resolution can be varied between 0 and 5. 
+  *  Due memory restrictions we will use image data scaled by 5. 
 * The size of our datasets?
+  * The size of unscaled dataset is about 500 GB for a single dataset. 
+  * The size of the scaled [ by 5] dataset is 0.5 GB. 
 * What is the histogram of a 3D image?
+  * Frequency of occurence of gray value. 
 * How sparse are the images (ratio of pixels with value 0 over size of the image)?
 
 **Exploratory** <br />
