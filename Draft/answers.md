@@ -25,6 +25,7 @@ T is a histogram of a data, which is table of counting the times a value appears
 * What is the histogram of a 3D image?
   * Frequency of occurence of gray value. 
 * How sparse are the images (ratio of pixels with value 0 over size of the image)?
+   * we need to look at the data to find the number of 0s in the image. 
 
 **Exploratory** <br />
 
