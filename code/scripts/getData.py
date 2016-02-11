@@ -28,17 +28,18 @@ def main():
 
     n = u'5' # resolution
     print "ndio get cutout ... TOKEN=%s CHANNEL=%s RESOLUTION=%s"%(TOKEN,CHANNEL,n)
-    #data = nd.get_cutout(TOKEN,CHANNEL,
-    #                    imagesSizes[n][0]/2-50,imagesSizes[n][0]/2+50,
-    #                    imagesSizes[n][1]/2-50,imagesSizes[n][1]/2+50,
-    #                    imagesSizes[n][2]/2-50,imagesSizes[n][2]/2+50,
-    #                    resolution=int(n))
     data = nd.get_cutout(TOKEN,CHANNEL,
-                        0,100,
-                        0,100,
-                        0,100,
+                        0,imagesSizes[n][0],
+                        0,imagesSizes[n][1],
+                        0,imagesSizes[n][2],
                         resolution=int(n))
-    pprint.pprint(data,indent=2)
+    #data = nd.get_cutout(TOKEN,CHANNEL,
+    #                    0,100,
+    #                    0,100,
+    #                    0,100,
+    #                    resolution=int(n))
+    #pprint.pprint(data,indent=2)
+
     outFile = DATAPATH+'%s_%s_%s.csv'%(TOKEN,CHANNEL,n)
     np.savetxt(outFile,
                 data,
