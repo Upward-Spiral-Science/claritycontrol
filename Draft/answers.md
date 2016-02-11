@@ -14,6 +14,7 @@ T is a histogram of a data, which is table of counting the times a value appears
 
 * What assumptions do we need to make before analyzing our data?
 * What is the meaning of three dimensions in a 3D image dataset?
+> 3 dimensions - 3 spatial axes X Y Z
 * What is the resolution of a 3D image?
 * The size of our datasets?
 * What is the histogram of a 3D image?
