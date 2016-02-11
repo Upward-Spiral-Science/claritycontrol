@@ -2,7 +2,7 @@
 
 We have D datasets, each dataset contains 3D image data I=G(X,Y,Z) in gray scale.
 
-R is the resolution level of a 3D image data I, it can be set from 1 to 5.
+R is the resolution level of a 3D image data I, it can be set from 0 to 5.
 
 We know that gray scale image contains values form 0 to 255 for each pixel.
 
@@ -13,9 +13,10 @@ T is a histogram of a data, which is table of counting the times a value appears
 **Descriptive** <br />
 
 * What assumptions do we need to make before analyzing our data?
+  * No external factor plays a greater role than the influence of concaine/fear on the brain 
 * What is the meaning of three dimensions in a 3D image dataset?
-> 3 dimensions - 3 spatial axes X Y Z
-* What is the resolution of a 3D image?
+  * 3 dimensions - 3 spatial axes X Y Z
+* What is the resolution of a 3D image? 
 * The size of our datasets?
 * What is the histogram of a 3D image?
 * How sparse are the images (ratio of pixels with value 0 over size of the image)?
