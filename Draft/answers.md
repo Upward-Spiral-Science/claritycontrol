@@ -14,21 +14,23 @@ Each dimension X,Y,Z of the image data I has seperate ranges and offsets.
 
 * What assumptions do we need to make before analyzing our data?
 There are many assumptions that are necessary: 
-- a) By removing "outliers" we are not changing fundamental information about the brain
-- b) By reducing the resolution to a significant extent (resolution factor = 5) we can still obtain reasonable data
-- c) Image analysis techniques will not change the data to a significant extent
+  * By removing "outliers" we are not changing fundamental information about the brain
+  * By reducing the resolution to a significant extent (resolution factor = 5) we can still obtain reasonable data
+  * Image analysis techniques will not change the data to a significant extent
+  * No external factor plays a greater role than the influence of concaine/fear on the brain
 
 * What is the meaning of three dimensions in a 3D image dataset?
-- The meaning of 3 different coordinates of data we need to analyze
+  * The meaning of 3 different coordinates of data we need to analyze- 3 spatial axes [X Y Z]
 
 * The best size of our datasets for experimentation?
-- The bottleneck probably will not be the size of the dataset, rather it will be the processing power of our computers
+  * The bottleneck probably will not be the size of the dataset, rather it will be the processing power of our computers
+  * The size of a single dataset [500 GB] can be reduced to a manageable size [0.5 GB] by scaling the resolution by a factor of 5. 
 
 * What is the histogram of a 3D image?
-- Determines the grayscale value spread of the image
+  * Determines the grayscale value spread of the image
 
 * How sparse are the images (ratio of pixels with value 0 over size of the image)?
-- Depends on the resolution of the iamge 
+  * Depends on the resolution of the image. 
 
 **Exploratory** <br />
 
