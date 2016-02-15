@@ -13,6 +13,11 @@ Each dimension X,Y,Z of the image data I has seperate ranges and offsets.
 **Descriptive** <br />
 
 * What assumptions do we need to make before analyzing our data?
+   There are many assumptions that are necessary: 
+     - a) By removing "outliers" we are not changing fundamental information about the brain
+     - b) By reducing the resolution to a significant extent (resolution factor = 5) we can still obtain reasonable data
+     - c) Image analysis techniques will not change the data to a significant extent
+
 * What is the meaning of three dimensions in a 3D image dataset?
 * The best size of our datasets for experimentation?
 * What is the histogram of a 3D image?
