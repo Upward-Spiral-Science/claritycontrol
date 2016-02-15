@@ -19,7 +19,10 @@ Each dimension X,Y,Z of the image data I has seperate ranges and offsets.
      - c) Image analysis techniques will not change the data to a significant extent
 
 * What is the meaning of three dimensions in a 3D image dataset?
+   
 * The best size of our datasets for experimentation?
+   The bottleneck probably will not be the size of the dataset,  
+
 * What is the histogram of a 3D image?
 * How sparse are the images (ratio of pixels with value 0 over size of the image)?
 
