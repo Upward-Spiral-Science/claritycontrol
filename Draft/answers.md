@@ -35,17 +35,17 @@ There are many assumptions that are necessary:
 **Exploratory** <br />
 
 * Can normalized histograms create meaningful data for the CLARITY brains?
-- We need more data, however theoretically there should be differences in the normalized histograms
+ * We need more data, however theoretically there should be differences in the normalized histograms
 * Do we need to segment the image data? 
-- We can only answer this after we parse the data without segmentation
+ * We can only answer this after we parse the data without segmentation
 * How do we perform segmentation?
-- Segmentation needs to be performed by calling chunks/blocks of data of higher quality rather than a large mass of data of lower quality
+ * Segmentation needs to be performed by calling chunks/blocks of data of higher quality rather than a large mass of data of lower quality
 * How does the resolution effect our project?
-- Lower resolution will give us more “black” pixels
+ * Lower resolution will give us more “black” pixels
 * What is the best resolution for our 3D image - balancing precision and recall?
-- This can only be determined by testing
+ * This can only be determined by testing
 * If p_x(i)=p(x=i)=n_i/n where 0<=i<L, then which normalization technique is best?
-- We don’t know the answer to this
+ * We don’t know the answer to this yet
 
 **Inferential** <br />
 
