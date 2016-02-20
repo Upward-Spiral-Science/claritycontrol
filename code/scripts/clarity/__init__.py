@@ -38,7 +38,7 @@ class Clarity(object):
         self._img = None
         return self
 
-    def imgToPoints(self,threshold=50,sample=1,optimize=False):
+    def imgToPoints(self,threshold=50,sample=1,optimize=True):
         if not 0<threshold<255:
             raise ValueError("Threshold should be within (0,255).")
         if not 0<sample<=1:

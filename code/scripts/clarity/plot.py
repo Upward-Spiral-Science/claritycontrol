@@ -226,9 +226,10 @@ class Canvas(app.Canvas):
         u_linewidth = 0
         u_antialias = 0
 
-        self.translate = 2
+        self.translate = np.max(points[:,2])
+        self.scale = np.max(points[:,2])
         self.program = gloo.Program(vert, frag)
-        self.view = translate((0,0, -np.max(points[:,2])*1.5))
+        self.view = translate((0,0, -self.translate))
         self.model = np.eye(4, dtype=np.float32)
         self.projection = np.eye(4, dtype=np.float32)
 
@@ -239,7 +240,7 @@ class Canvas(app.Canvas):
         self.program['u_antialias'] = u_antialias
         self.program['u_model'] = self.model
         self.program['u_view'] = self.view
-        self.program['u_size'] = 5 / self.translate # smallest is 1
+        self.program['u_size'] = self.scale / self.translate # smallest is 1
 
         self.theta = 0
         self.phi = 0
@@ -258,8 +259,8 @@ class Canvas(app.Canvas):
                 self.timer.start()
 
     def on_timer(self, event):
-        self.theta += .5
-        self.phi += .5
+        self.theta += .1
+        self.phi += .1
         self.model = np.dot(rotate(self.theta, (0, 0, 1)),
                             rotate(self.phi, (0, 1, 0)))
         self.program['u_model'] = self.model
@@ -270,11 +271,11 @@ class Canvas(app.Canvas):
 
     def on_mouse_wheel(self, event):
         self.translate -= event.delta[1]
-        self.translate = max(2, self.translate)
+        self.translate = max(self.scale*0.2, self.translate)
         self.view = translate((0, 0, -self.translate))
 
         self.program['u_view'] = self.view
-        self.program['u_size'] = 5 / self.translate
+        self.program['u_size'] = self.scale / self.translate
         self.update()
 
     def on_draw(self, event):
