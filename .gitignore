@@ -1,5 +1,6 @@
 *.img
 *.zip
+*.hdr
 
 .idea/
 

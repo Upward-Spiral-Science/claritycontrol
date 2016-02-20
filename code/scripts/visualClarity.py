@@ -3,14 +3,36 @@
 __author__ = 'david'
 from __builtin__ import *
 
-import imghdr
 import numpy as np
 import scipy as sp
-from PIL import Image
+import nibabel as nib
+from OpenGL.GL import *
+from OpenGL.GLU import *
+from OpenGL.GLUT import *
+
 from resources import DATAPATH
 
+data = None
+
+def drawClarity():
+    glClear(GL_COLOR_BUFFER_BIT)
+    glRotatef(1, 0, 1, 0)
+
+    glDrawArrays(GL_POINTS,0,1000)
+    glFlush()
+
+def main():
+    img = nib.load(DATAPATH+"Fear199.img")
+    data = img.get_data()
+
+    #openGL
+    glutInit()
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA)
+    glutInitWindowSize(1000, 1000)
+    glutCreateWindow("First")
+    glutDisplayFunc(drawClarity)
+    glutIdleFunc(drawClarity)
+    glutMainLoop()
+
 if __name__ == '__main__':
-    # Fear199 540 717 452
-    data = np.memmap(DATAPATH+"Fear199.img",dtype=np.uint8,shape=(717, 452, 540))
-    im = Image.fromarray(data[:,:,200])
-    im.show()
+    main()
