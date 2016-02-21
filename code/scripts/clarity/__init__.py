@@ -8,9 +8,10 @@ import nibabel as nib
 import resources as rs
 from vispy import app
 from plot import Canvas
-import random
+# import random,sys
+# random.seed()
 
-random.seed()
+np.random.seed()
 
 class Clarity(object):
     def __init__(self,token,imgfile=None,pointsfile=None):
@@ -20,43 +21,91 @@ class Clarity(object):
         self._token = token
         self._imgfile = imgfile
         self._pointsfile = pointsfile
-        self._img = None   # img data
-        self._points=None  # [[x],[y],[z],[v]]
+        self._img = None     # img data
+        self._points = None  # [[x],[y],[z],[v]]
+        self._shape = None   # (x,y,z)
+        self._max = None     # max value
 
-    def loadImg(self,path=None,info=True):
+    def loadImg(self,path=None, info=True, presample=1):
         if path is None:
             path = rs.DATAPATH
         pathname = path+self._token+".img"
         img = nib.load(pathname)
         if info:
             print(img)
-        print("Image Loaded: %s"%(pathname))
         self._img = img.get_data()[:,:,:,0]
+        self._shape = self._img.shape
+        self._max = np.max(self._img)
+        print("Image Loaded: %s"%(pathname))
         return self
+
+    def getShape(self):
+        return self._shape
+
+    def getMax(self):
+        return self._max
 
     def discardImg(self):
         self._img = None
         return self
 
-    def imgToPoints(self,threshold=50,sample=1,optimize=True):
-        if not 0<threshold<255:
-            raise ValueError("Threshold should be within (0,255).")
+    def imgToPoints(self,threshold=0.1,sample=0.5,optimize=True):
+        if not 0<=threshold<1:
+            raise ValueError("Threshold should be within [0,1).")
         if not 0<sample<=1:
             raise ValueError("Sample rate should be within (0,1].")
         if self._img is None:
             raise ValueError("Img haven't loaded, please call loadImg() first.")
 
-        points = []
-        m = np.max(self._img)
-        for (i,j,k),v in np.ndenumerate(self._img):
-            v = np.int16(255*v/m)
-            if v > threshold and random.random() <= sample:
-                points.append([i,j,k,v])
-
+        total = self._shape[0]*self._shape[1]*self._shape[2]
+        print "Coverting to points...\ntoken=%s\ntotal=%d\nmax=%f\nthreshold=%f\nsample=%f"\
+               %(self._token,total,self._max,threshold,sample)
+        print "(This will take couple minutes.)"
+        # threshold
+        filt = self._img > threshold * self._max
+        x,y,z = np.where(filt)
+        v = self._img[filt]
         if optimize:
             self.discardImg()
+        v = np.int16(255*(np.float32(v)/np.float32(self._max)))
+        l = v.shape
+        print "Above threshold=%d"%(l)
+        # sample
+        filt = np.random.random(size=l) < sample
+        print filt
+        x = x[filt]
+        y = y[filt]
+        z = z[filt]
+        v = v[filt]
+        self._points = np.vstack([x,y,z,v])
+        self._points = np.transpose(self._points)
+        print "Samples=%d"%(self._points.shape[0])
 
-        self._points = np.array(points,dtype=np.int16)
+        # version 2
+        # filter according to threshold & sample
+        # total = self._shape[0]*self._shape[1]*self._shape[2]
+        # print "Coverting to points...\ntoken=%s\ntotal=%d\nmax=%f\nthreshold=%f\nsample=%f"\
+        #       %(self._token,total,self._max,threshold,sample)
+        # sample = min(sample/(1-threshold),1.0)
+        # threshold = self._max * threshold
+        # print "Modified threshold=%f\nModified sample=%f"%(threshold,sample)
+        # temp = []
+        # scanned = 0
+        # collected = 0
+        # for (i,j,k),v in np.ndenumerate(self._img):
+        #     if v > threshold and random.random() <= sample:
+        #         temp.append([i,j,k,np.int16(255*v/self._max)])
+        #         collected+=1
+        #     scanned+=1
+        #     print "\rscanned: %d/%d, collected=%d         "%(scanned,total,collected),
+        #     sys.stdout.flush()
+
+        # version 1
+        # self._points = np.array([[i,j,k,np.int16(255*v/self._max)] \
+        #                          for (i,j,k),v in np.ndenumerate(self._img) \
+        #                          if v > threshold and random.random() <= sample],dtype=np.int16)
+
+        print "Finished"
         return self
 
     def loadPoints(self,path=None):
@@ -87,7 +136,7 @@ class Clarity(object):
         self._points[:,2] -= np.int16(centerZ)
         return self
 
-    def histogramEqualize(self,scale=25):
+    def histogramEqualize(self,scale=30):
         # get image histogram
         imhist, bins = np.histogram(self._points[:,3],256,density=True)
         cdf = imhist.cumsum()         # cumulative distribution function
@@ -95,6 +144,11 @@ class Clarity(object):
 
         # use linear interpolation of cdf to find new pixel values
         return np.interp(self._points[:,3],bins[:-1],cdf)
+
+    def showHistogram(self,bins=50):
+        if self._points is None:
+            raise ValueError("Points is empty, please call imgToPoints() first.")
+        # HistogramVisual(self._points[:,3],bins)
 
     def show(self):
         if self._points is None:
@@ -107,16 +161,17 @@ class Clarity(object):
         my = np.max(colors[:,1])
         mz = np.max(colors[:,2])
 
-        brighter = 0.2
+        brighter = 0.05
         colors[:,0]/=mx+brighter
         colors[:,1]/=my+brighter
         colors[:,2]/=mz+brighter
 
         alpha = np.empty((len(colors[:,0]),1))
-        alpha.fill(1.0)
+        alpha.fill(0.8)
         colors = np.hstack([colors,alpha])
         # sizes
         sizes = self.histogramEqualize()
+
         # visualize
         c = Canvas(self._points[:,:3],colors,sizes)
         app.run()

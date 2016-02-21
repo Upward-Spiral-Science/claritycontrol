@@ -4,10 +4,10 @@ __author__ = 'david'
 from __builtin__ import *
 
 import numpy as np
-from vispy import gloo
-from vispy import app
+from vispy import gloo,app,scene,visuals
 from vispy.util.transforms import perspective, translate, rotate
-
+from vispy.visuals import transforms
+from vispy.scene.canvas import SceneCanvas
 vert = """
 #version 120
 
@@ -205,20 +205,18 @@ void main()
     }
 }
 """
-class Canvas(app.Canvas):
-    def __init__(self,points,colors,sizes):
-        app.Canvas.__init__(self, keys='interactive', size=(1440, 900))
-        ps = self.pixel_scale
+
+class Canvas(SceneCanvas):
+    def __init__(self,points,colors,sizes,title="Clarity Visualization",size=(1440,900),axis=True):
+        SceneCanvas.__init__(self, title=title, keys='interactive', size=size)
 
         # Create vertices
         n, _ = points.shape
-
         data = np.zeros(n, [('a_position', np.float32, 3),
                             ('a_bg_color', np.float32, 4),
                             ('a_fg_color', np.float32, 4),
                             ('a_size', np.float32, 1)])
         data['a_position'] = points
-        # data['a_bg_color'] = np.random.uniform(0.85, 1.00, (n, 4)) # fill color
         data['a_bg_color'] = colors  # RGBA
         data['a_fg_color'] = 255, 255, 255, 1  # outline color
         data['a_size'] = sizes  # length n
@@ -227,7 +225,7 @@ class Canvas(app.Canvas):
         u_antialias = 0
 
         self.translate = np.max(points[:,2])
-        self.scale = np.max(points[:,2])
+        self.scale = self.translate
         self.program = gloo.Program(vert, frag)
         self.view = translate((0,0, -self.translate))
         self.model = np.eye(4, dtype=np.float32)
@@ -259,8 +257,8 @@ class Canvas(app.Canvas):
                 self.timer.start()
 
     def on_timer(self, event):
-        self.theta += .1
-        self.phi += .1
+        self.theta += .2
+        self.phi += .2
         self.model = np.dot(rotate(self.theta, (0, 0, 1)),
                             rotate(self.phi, (0, 1, 0)))
         self.program['u_model'] = self.model
@@ -270,10 +268,9 @@ class Canvas(app.Canvas):
         self.apply_zoom()
 
     def on_mouse_wheel(self, event):
-        self.translate -= event.delta[1]
+        self.translate -= event.delta[1]*10 # speed up
         self.translate = max(self.scale*0.2, self.translate)
         self.view = translate((0, 0, -self.translate))
-
         self.program['u_view'] = self.view
         self.program['u_size'] = self.scale / self.translate
         self.update()
@@ -282,6 +279,7 @@ class Canvas(app.Canvas):
         gloo.clear()
         self.program.draw('points')
 
+
     def apply_zoom(self):
         gloo.set_viewport(0, 0, self.physical_size[0], self.physical_size[1])
         self.projection = perspective(45.0, self.size[0] /
@@ -289,24 +287,4 @@ class Canvas(app.Canvas):
         self.program['u_projection'] = self.projection
 
 if __name__ == '__main__':
-    # img = nib.load(DATAPATH+"Fear199.img")
-    # data = img.get_data()
-    #
-    # x,y,z,_ = data.shape
-    #
-    # data = data[x/2-100:x/2+100, y/2-100:y/2+100, z/2-100:z/2+100,]
-    # x,y,z,_ = data.shape
-    #
-    # points=np.ndarray(shape=(0,3),dtype=np.float32)
-    # threshold=200
-    #
-    # for a in range(0,x):
-    #     for b in range(0,y):
-    #         for c in range(0,z):
-    #             if data[a,b,c,0] > threshold:
-    #                 points=np.vstack([points,[a,b,c]])
-    # print "finish"
-    #
-    # c = Canvas(points)
-    # app.run()
     pass
