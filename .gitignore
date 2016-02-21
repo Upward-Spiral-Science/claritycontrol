@@ -1,4 +1,7 @@
 
+*.zip
+*.img
+*.hdr
 .idea/
 
 # User-specific stuff:
