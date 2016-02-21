@@ -8,6 +8,7 @@ import nibabel as nib
 import resources as rs
 from vispy import app
 from plot import Canvas
+import gc
 # import random,sys
 # random.seed()
 
@@ -46,7 +47,8 @@ class Clarity(object):
         return self._max
 
     def discardImg(self):
-        self._img = None
+        del self._img
+        gc.collect()
         return self
 
     def imgToPoints(self,threshold=0.1,sample=0.5,optimize=True):
@@ -71,12 +73,12 @@ class Clarity(object):
         l = v.shape
         print "Above threshold=%d"%(l)
         # sample
-        filt = np.random.random(size=l) < sample
-        print filt
-        x = x[filt]
-        y = y[filt]
-        z = z[filt]
-        v = v[filt]
+        if sample < 1.0:
+            filt = np.random.random(size=l) < sample
+            x = x[filt]
+            y = y[filt]
+            z = z[filt]
+            v = v[filt]
         self._points = np.vstack([x,y,z,v])
         self._points = np.transpose(self._points)
         print "Samples=%d"%(self._points.shape[0])
