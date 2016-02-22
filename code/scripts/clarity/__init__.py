@@ -152,8 +152,11 @@ class Clarity(object):
         #    raise ValueError("Points is empty, please call imgToPoints() first.")
 
         plt.hist(self._points[:,3],bins=bins)
+        plt.title("%s Points Histogram"%(self._token))
+        plt.ylabel("count")
+        plt.xlabel("level")
+        plt.grid()
         plt.show()
-        return self
 
     def show(self):
         if self._points is None:
