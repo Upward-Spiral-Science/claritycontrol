@@ -1,13 +1,14 @@
 #!/usr/bin/python
 #-*- coding:utf-8 -*-
 __author__ = 'david'
-from __builtin__ import *
 
 import numpy as np
 import nibabel as nib
 import resources as rs
 from vispy import app
 from plot import Canvas
+import matplotlib.pyplot as plt
+import pylab as pl
 import gc
 # import random,sys
 # random.seed()
@@ -60,9 +61,9 @@ class Clarity(object):
             raise ValueError("Img haven't loaded, please call loadImg() first.")
 
         total = self._shape[0]*self._shape[1]*self._shape[2]
-        print "Coverting to points...\ntoken=%s\ntotal=%d\nmax=%f\nthreshold=%f\nsample=%f"\
-               %(self._token,total,self._max,threshold,sample)
-        print "(This will take couple minutes.)"
+        print("Coverting to points...\ntoken=%s\ntotal=%d\nmax=%f\nthreshold=%f\nsample=%f"\
+               %(self._token,total,self._max,threshold,sample))
+        print("(This will take couple minutes.)")
         # threshold
         filt = self._img > threshold * self._max
         x,y,z = np.where(filt)
@@ -71,7 +72,7 @@ class Clarity(object):
             self.discardImg()
         v = np.int16(255*(np.float32(v)/np.float32(self._max)))
         l = v.shape
-        print "Above threshold=%d"%(l)
+        print("Above threshold=%d"%(l))
         # sample
         if sample < 1.0:
             filt = np.random.random(size=l) < sample
@@ -81,7 +82,7 @@ class Clarity(object):
             v = v[filt]
         self._points = np.vstack([x,y,z,v])
         self._points = np.transpose(self._points)
-        print "Samples=%d"%(self._points.shape[0])
+        print("Samples=%d"%(self._points.shape[0]))
 
         # version 2
         # filter according to threshold & sample
@@ -107,7 +108,7 @@ class Clarity(object):
         #                          for (i,j,k),v in np.ndenumerate(self._img) \
         #                          if v > threshold and random.random() <= sample],dtype=np.int16)
 
-        print "Finished"
+        print("Finished")
         return self
 
     def loadPoints(self,path=None):
@@ -143,14 +144,16 @@ class Clarity(object):
         imhist, bins = np.histogram(self._points[:,3],256,density=True)
         cdf = imhist.cumsum()         # cumulative distribution function
         cdf = scale * cdf / cdf[-1]   # normalize
-
         # use linear interpolation of cdf to find new pixel values
         return np.interp(self._points[:,3],bins[:-1],cdf)
 
-    def showHistogram(self,bins=50):
-        if self._points is None:
-            raise ValueError("Points is empty, please call imgToPoints() first.")
-        # HistogramVisual(self._points[:,3],bins)
+    def showHistogram(self,bins=255):
+        #if self._points is None:
+        #    raise ValueError("Points is empty, please call imgToPoints() first.")
+
+        plt.hist(self._points[:,3],bins=bins)
+        plt.show()
+        return self
 
     def show(self):
         if self._points is None:
