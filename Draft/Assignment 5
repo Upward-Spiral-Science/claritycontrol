@@ -31,9 +31,52 @@
     - If L is the set of loss functions 
       - L = {l: yxy -> Real+}
         - Here we are finding which scores are the best 
-    - Definitions: Voxels, 
+    - Definitions: Voxels, Priors, Baye's rule F_(x,y) = F_(x|y)F_y=F_(y|x)F_x ->  
+      - F_(x|y)=N(M_y. 1)
+      - F_y = Bern(pi)
+      - Next need to fit the joint distribution 
+        - After fitting the Bayes optimal is called the Bayes plugin
+        - MLE - minimizing squared error
+        - Sample n train sample (xi, yi) ~iid F_xx generate training data i∈[n_train]
+        - estimate classifier theta
+          - sample iidF_xy i∈[n_test]
+          
     
     - Best classifier is called the Bayes Optimal
-      - g* = argmax F_((x|y)=y)
+      - g* = argmax F_((x=(x)|(y)=y))
+        - Can use a posterari if priors are not equal
+          - F_(x=x, y=y) = F_(x|y)F_y
         - compute argmax for y∈y
+          - Let y = 0 is .99 y-1 is .01
         
+    - Next need to relect get change level accuracy which will almost definitely ahppen if you use a regular loss function 
+      - Use histogram instead of image data
+        - Classifier list:
+          - LDA
+            - Variances are the same 
+            - Made by Fischer
+            - Finds optimal linear classifier (optimal line) under the assumptions that we have made
+              - Advantages: Very interpretable, Very fast, Linear
+          - Random Forest
+            - Decision tree thresholds are created
+            - Choose a loss function and then try to do a greedy search
+            - Find the optimal thresholds to maximize purity
+            - Change thresholds to maximize purity so that most of one group is in one part and the others are in the others
+            - Random Forest uses decision trees on subsets of your data, since each tree is noisy and can overfit, so averageing over many different classifiers it will be much more effective
+            - This is an ensemble method 
+              - Every single classifier is on a different point on the bias variance tradeoff so when you average everything it will be more consistent
+          - SVM
+          - Logistic
+          - Neural Network
+            - Uses linear algebra, runs on GPU
+            - Takes in more information and is very useful for computer vision techniques
+            - Natively do the classificiation
+          - KNN
+            - K nearest neighbor 
+            - specify apriori k and find the distance between the points and K 
+            - Assuming K is big enough, it will always converge irrespectively
+            - Doesn't care about the distributions, but it is universally consistent
+          - QDA
+            - Quadratic descriminatory analysis
+            - Optimal discriminatory boundary is curved
+            - Covariance matrices
