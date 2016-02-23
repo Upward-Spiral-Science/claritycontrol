@@ -1,0 +1,8 @@
+1. State assumptions
+2. Formally define classification/regression problem
+3. Provide algorithm to solve above
+4. Sample simulated data inspired by the data and test method
+5. Compile accuracy
+6. Plot accuracy vs. N
+7. Apply method on real data
+8. Reflect
