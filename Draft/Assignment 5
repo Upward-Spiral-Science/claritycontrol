@@ -6,3 +6,34 @@
 6. Plot accuracy vs. N
 7. Apply method on real data
 8. Reflect
+
+- "Machine Learning" is usually classification or prediction
+  - predictive is subject specific
+  - 
+  
+- Clarity brains have (X, Y) ~iid F_(xy) which is some distribution
+  - X is subject 
+  - Y is {0, 1}
+  - Function g(x) -> spits out a class label (thus g is a classifier function)
+  - G = {g: map from reals to {0, 1}}
+    - Classifier takes a single x 
+      - If x>k but <0 is one classifier
+      - Best clasisifier is statistical decision theory
+        - Need to define a loss function that tells us how wrong we are
+        - We need to choose classifier that minimizes loss
+        - G* = argmin(of g ∈ G where l(g(x), y)
+        => Squared error is a good option (g(x)-y)^2
+          - Problem is that (0-1)^2 = (1-0)^2 so you don't know which side of the "wrong" you are
+        => Absolute error is |g(x)-y|
+        => Zero one error 
+          - If g(x)=y then l=0
+          - If g(y)!=y then l=1
+    - If L is the set of loss functions 
+      - L = {l: yxy -> Real+}
+        - Here we are finding which scores are the best 
+    - Definitions: Voxels, 
+    
+    - Best classifier is called the Bayes Optimal
+      - g* = argmax F_((x|y)=y)
+        - compute argmax for y∈y
+        
