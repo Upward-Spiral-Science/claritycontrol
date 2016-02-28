@@ -52,6 +52,12 @@ class Clarity(object):
         gc.collect()
         return self
 
+    def getHistogram(self,bins,range,density=True):
+        if self._img is None:
+            raise ValueError("Img haven't loaded, please call loadImg() first.")
+
+        return np.histogram(self._img,bins=bins,range=range,density=density)
+
     def imgToPoints(self,threshold=0.1,sample=0.5,optimize=True):
         if not 0<=threshold<1:
             raise ValueError("Threshold should be within [0,1).")
@@ -150,7 +156,6 @@ class Clarity(object):
     def showHistogram(self,bins=255):
         #if self._points is None:
         #    raise ValueError("Points is empty, please call imgToPoints() first.")
-
         plt.hist(self._points[:,3],bins=bins)
         plt.title("%s Points Histogram"%(self._token))
         plt.ylabel("count")
