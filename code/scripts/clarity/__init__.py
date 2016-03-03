@@ -56,7 +56,7 @@ class Clarity(object):
         if self._img is None:
             raise ValueError("Img haven't loaded, please call loadImg() first.")
 
-        return np.histogram(self._img,bins=bins,range=range,density=density)
+        return np.histogram(self._img.flatten(),bins=bins,range=range,density=density)
 
     def imgToPoints(self,threshold=0.1,sample=0.5,optimize=True):
         if not 0<=threshold<1:
