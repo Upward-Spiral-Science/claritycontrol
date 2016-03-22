@@ -8,6 +8,7 @@ BASE_PATH="../"
 RAW_DATA_PATH = BASE_PATH+"data/raw/"
 META_DATA_PATH = BASE_PATH+"data/meta/"
 POINTS_DATA_PATH = BASE_PATH+"data/points/"
+HIST_DATA_PATH = BASE_PATH+"data/hist/"
 
 TOKENS=["Cocaine174","Cocaine175","Cocaine178",
         "Control181","Control182","Control189","Control239","Control258",
