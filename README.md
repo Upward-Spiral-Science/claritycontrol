@@ -5,28 +5,28 @@ Main repository for ClarityControl
 
 ### Assignment 1
 
-[./Draft/summary.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/Draft/summary.md)
+[./assignments/a01_summary.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a01_summary.md)
 
 ### Assignment 2
 
-[./Draft/questions.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/Draft/questions.md)
+[./assignments/a02_questions.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a02_questions.md)
 
 ### Assignment 3
 
-[./Draft/answers.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/Draft/answers.md)
+[./assignments/a03_descriptive_and_exploratory_answers.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a03_descriptive_and_exploratory_answers.md)
 
 ### Assignment 4
 
-[./Draft/Homework4.ipynb](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/Draft/Homework4.ipynb)
+[./assignments/a04_inferential_simulation.ipynb](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a04_inferential_simulation.ipynb)
 
 ### Assignment 5
 
-[./code/HW5.ipynb] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/code/HW5.ipynb)
+[./assignments/a05_classification_simulation.ipynb] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a05_classification_simulation.ipynb)
 
 ### Assignment 6
 
-[./code/test_assumptions.ipynb] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/code/test_assumptions.ipynb)
+[./assignments/a06_test_assumptions.ipynb] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a06_test_assumptions.ipynb)
 
 ### Assignment 7
 
-[./Report/CLARITY%20Control.pdf](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/Report/CLARITY%20Control.pdf)
+[./assignments/a07_summary_presentation.pdf](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a07_summary_presentation.pdf)
