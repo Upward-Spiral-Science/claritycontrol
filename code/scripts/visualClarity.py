@@ -6,12 +6,14 @@ from __builtin__ import *
 import numpy as np
 import scipy as sp
 import nibabel as nib
+import clarity.resources as rs
+import clarity as cl
+import gc
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
 
-from resources import DATAPATH
-
+DATAPATH = "/Users/albertlee/claritycontrol/code/data/"
 data = None
 
 def drawClarity():

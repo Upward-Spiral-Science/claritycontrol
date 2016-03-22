@@ -3,7 +3,8 @@
 __author__ = 'david'
 from __builtin__ import *
 
-BASEPATH = "/Users/david/Desktop/CourseWork/TheArtOfDataScience/claritycontrol/code/data/"
+#BASEPATH = "/Users/david/Desktop/CourseWork/TheArtOfDataScience/claritycontrol/code/data/"
+BASEPATH = "../data/"
 DATAPATH = BASEPATH+"./"
 METADATAPATH = BASEPATH+"meta/"
 POINTSPATH = BASEPATH+"points/"

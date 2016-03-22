@@ -1,8 +1,12 @@
 *.img
 *.zip
 *.hdr
+*.csv
+*.pyc
 
 .idea/
+
+.DS_Store
 
 # User-specific stuff:
 .idea/workspace.xml

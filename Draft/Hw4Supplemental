@@ -1,0 +1,31 @@
+Model
+F(i,j) ~ Clarity image of a particular section 
+a) F(I,k) = { F(I|k)*F(k) }
+F(k)= {0,1}
+
+0 = Control Image
+1 = Cocaine Image
+b) F(I,k) = { F(I|k)*F(k) }
+F(k)= {0,1}
+
+0 = Control Image
+1 = Fear Image
+Formalize Test
+H0: a) F(I,0) > || = F(I,1)
+b)F(I,0) < ||= F(I,1)
+a) The maximum gray value for Cocaine stimulated brain is equal to the control brain. 
+b) The maximum gray value for fear induced brain is equal the control brain.
+
+HA: a) F(I,0) < || != F(I,1)
+b)F(I,0) > || != F(I,1)
+a) The maximum gray value for Cocaine stimulated brain is greater than the control brain. 
+b) The maximum gray value for fear induced brain is lower than the control brain.
+
+Test Statistic 
+F(i,j) = floor((L-1)∑_"n=0" ^"F(i,j)" ▒"Pn" )
+Pn = Number of pixels of intensity n / Total number of pixels
+F(I) = mean (F(i,j)) % mean gray value in the image
+
+Result:
+We can infer from the histogram plots that the maximum gray values in cocaine stimulated brain is higher than the control brain. This is conclusive with the alternative hypothesis. This also agrees with literature that indicates that the brain is more active when stimulated by cocaine, thereby lighting up more than the control brain.
+
