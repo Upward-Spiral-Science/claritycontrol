@@ -49,7 +49,15 @@ We then decided to reevaluate the assumptions we made initially to better unders
 
 #### Testing Assumptions
 We assumed that the data from different datasets was sampled idependently and identically. We tested each of these assumptions to see if we can impove our model.
-The assumptions we took for granted were also not necessarily requiring of deep analysis. Since there are 12 different graphs our study concluded that 12 clusters was the optimal number for example. 
+ 
+Plotted below is the Covariance matrix for the assumtpion that our data is sampled independently. 
+<img src="../figs/covariance_clarity.png" data-canonical-src="../figs/covariance_clarity" width="300" />
+<img src="../figs/bic_clarity.png" data-canonical-src="../figs/bic_clarity.png" width="300" />
+
+Plotted below is the Covariance matrix for the assumtpion that our data is identically sampled. 
+<img src="../figs/covariance_clarity2.png" data-canonical-src="../figs/covariance_clarity2" width="300" />
+
+The assumptions we took for granted were also not necessarily requiring of deep analysis. Since there are 12 different graphs our study concluded that 12 clusters was the optimal number for example.
 
 #### Next Steps
 So far we have obtained a greater understanding of our task at hand. Because traditional statistical approaches are futile due to the small sample size, it is important to approach our problem from a more qualitative aspect. Thus we will focus on visualization comparisons, and analysis tools instead. Once more data is obtained, we can use the tools we have created to analyze and then create statistically significant data.
