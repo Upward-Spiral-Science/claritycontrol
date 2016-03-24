@@ -52,10 +52,10 @@ We assumed that the data from different datasets was sampled idependently and id
  
 Plotted below is the Covariance matrix for the assumtpion that our data is sampled independently. 
 <img src="../figs/covariance_clarity.png" data-canonical-src="../figs/covariance_clarity" width="300" />
-<img src="../figs/bic_clarity.png" data-canonical-src="../figs/bic_clarity.png" width="300" />
+From the above, we conclude that the assumption that the histograms were independent is most likely true. This is because cross-graph covariance matrix is not highly influenced by the off-diagonal components of the covariance matrix.
 
-Plotted below is the Covariance matrix for the assumtpion that our data is identically sampled. 
-<img src="../figs/covariance_clarity2.png" data-canonical-src="../figs/covariance_clarity2" width="300" />
+<img src="../figs/bic_clarity.png" data-canonical-src="../figs/bic_clarity.png" width="300" />
+From the above we observe that that our data most likely was not sampled identically from one distribution. This is an odd shape for a BIC curve, and thus we must do more investigation. This curve implies the larger number of clusters the better.
 
 The assumptions we took for granted were also not necessarily requiring of deep analysis. Since there are 12 different graphs our study concluded that 12 clusters was the optimal number for example.
 
