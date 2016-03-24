@@ -29,6 +29,13 @@ We worked with three datasets, Fear , Cocaine and Control with 3 subjects for ea
 
 #### Exploratory Analysis
 After visualizing the Clarity data and understanding where we could potentially generate useful data leads, we explored the images to determine patterns in the intensity of the images.
+We observed a significant difference in the graphs, so in order to understand this further we plotted a histogram of the image intensities for each dataset. 
+<img src="../figs/a04/Cocaine174_hist.png" data-canonical-src="../figs/a04/Cocaine174_hist" width="300" />
+
+<img src="../figs/a04/Control239_hist.png" data-canonical-src="../figs/a04/Control239_hist.png" width="300" />
+
+<img src="../figs/a04/Fear199_hist.png" data-canonical-src="../figs/a04/Fear199_hist.png" width="300" />
+
 
 #### Inferential Analysis
 Inferential Analysis was unfortunately not as useful for analysis because due to our extremely small sample size it was difficult to obtain statistically significant results. The main conclusion we reached was that the graphs we created were different from one another...which was obvious without any necessary analysis.
