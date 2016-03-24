@@ -30,3 +30,7 @@ Main repository for ClarityControl
 ### Assignment 7
 
 [./assignments/a07_summary_presentation.pdf](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a07_summary_presentation.pdf)
+
+### Assignment 8
+
+[./assignments/a08_progress_report.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a08_progress_report.md)
