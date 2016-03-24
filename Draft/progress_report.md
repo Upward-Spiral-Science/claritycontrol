@@ -71,11 +71,11 @@ Sahithi please put the links in for the following hw/ipython notebook stuff:
 
 | Question Type | Code |
 |---------------|------|
-| Descriptive | [**``./code/descriptive_and_exploratory_answers.ipynb``**](./code/descriptive_and_exploratory_answers.ipynb) |
-| Exploratory | [**``./code/descriptive_and_exploratory_answers.ipynb``**](./code/descriptive_and_exploratory_answers.ipynb) |
-| Inferential | [**``./code/inferential_simulation.ipynb``**](./code/inferential_simulation.ipynb) |
-| Predictive  | [**``./code/classification_simulation.ipynb``**](./code/classification_simulation.ipynb) |
-| Testing Assumptions | [**``./code/test_assumptions.ipynb``**](./code/test_assumptions.ipynb) |
+| Descriptive | [**``./assignments/a03_descriptive_and_exploratory_answers.md``**](./assignments/a03_descriptive_and_exploratory_answers.md) |
+| Exploratory | [**``./assignments/a03_descriptive_and_exploratory_answers.md``**](./assignments/a03_descriptive_and_exploratory_answers.md) |
+| Inferential | [**``./assignments/a04_inferential_simulation.ipynb``**](./assignments/a04_inferential_simulation.ipynb) |
+| Predictive  | [**``./assignments/a05_classification_simulation.ipynb``**](./assignments/a05_classification_simulation.ipynb) |
+| Testing Assumptions | [**``./assignments/a06_test_assumptions.ipynb``**](./assignments/a06_test_assumptions.ipynb) |
 
 #### Descriptive Analysis
 Answering the descriptive questions required looking at the visualized data and comparing the patterns we observed. Because we quickly realized such patterns would not be analyzable due to the subsampled nature of our visuals, we were forced to redraw descriptive analysis questions that focused more on the visuals.
