@@ -93,7 +93,7 @@ For exploratory analysis we started by looking at the csv files and making predi
 We needed to define a model for inferential analysis. Our initial data was composed of a single fear data file and a single control data file, so while actual analysis was not necessary to differentiate - since brains will have differences between themselves regardless of the specific type - we conducted a basic hypothesis test regardless.
 
 #### Predictive Analysis
-4 different classifiers were used. These classifiers were conducted using scikit's api.
+4 different classifiers were used. These classifiers were conducted using scikit's api. This was done in an iterative fashion.
 
 <img src="../figs/classification_clarity.png" data-canonical-src="../figs/classification_clarity.png" width="700" />
 
@@ -103,3 +103,5 @@ Three different assumptions were taken:
     "2. We assume that the data poinst are independent: $F_{X|0}=Norm(\\mu_{0},\\sigma_{0})^{V\\times V}$.\n",
     "3. We assume there is a class conditional difference across conditions={Control, Cocaine, Fear}.\n",
     "4. In addition, we assume that any other differences of the subjects such as genders, ages will not or have limit affects to the data. (We cannot test on this, because we do not have access to that information.)\n",
+    
+    Our results showed that the histograms were indeed sampled independently, that the data points are independent, but that class conditional differences may not exist.
