@@ -90,7 +90,7 @@ Answering the descriptive questions required looking at the visualized data and 
 
 
 #### Inferential Analysis
-We needed to defined a model for inferential analysis. 
+We needed to define a model for inferential analysis. 
 
 #### Predictive Analysis
 4 different classifiers were used. 
@@ -98,4 +98,8 @@ We needed to defined a model for inferential analysis.
 <img src="../figs/classification_clarity.png" data-canonical-src="../figs/classification_clarity.png" width="700" />
 
 #### Testing Assumptions
-Three different assumptions were taken - 
+Three different assumptions were taken:
+      "1. We assume that histograms are sampled according to: $x_i \\stackrel{iid}{\\sim} F$. This is both an independent and identical assumption.\n",
+    "2. We assume that the data poinst are independent: $F_{X|0}=Norm(\\mu_{0},\\sigma_{0})^{V\\times V}$.\n",
+    "3. We assume there is a class conditional difference across conditions={Control, Cocaine, Fear}.\n",
+    "4. In addition, we assume that any other differences of the subjects such as genders, ages will not or have limit affects to the data. (We cannot test on this, because we do not have access to that information.)\n",
