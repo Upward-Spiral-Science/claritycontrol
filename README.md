@@ -33,4 +33,4 @@ Main repository for ClarityControl
 
 ### Assignment 8
 
-[./assignments/a08_progress_report.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a08_progress_report.md)
+[claritycontrol/Draft/progress_report.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/Draft/progress_report.md)
