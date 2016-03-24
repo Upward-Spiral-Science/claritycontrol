@@ -105,8 +105,11 @@ Shown below is a figure illustrating the performance of each of these classifier
 Three different assumptions were taken:
 
 -We assume that histograms are sampled according to: $x_i \\stackrel{iid}{\\sim} F$. This is both an independent and identical assumption.
+
 -We assume that the data poinst are independent: $F_{X|0}=Norm(\\mu_{0},\\sigma_{0})^{V\\times V}$.
+
 -We assume there is a class conditional difference across conditions={Control, Cocaine, Fear}.
+
 -In addition, we assume that any other differences of the subjects such as genders, ages will not or have limit affects to the data. (We cannot test on this, because we do not have access to that information.)
     
     
