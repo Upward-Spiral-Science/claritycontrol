@@ -38,7 +38,7 @@ Classification was also difficult due to the small sample size. While we went th
 We changed the bin numbers in hopes of obtaining different results, but unfortunately while the data was indeed different, the data was bad in different ways.
 
 #### Testing Assumptions
-
+The assumptions we took for granted were also not necessarily requiring of deep analysis. Since there are 12 different graphs our study concluded that 12 clusters was the optimal number for example. 
 
 #### Next Steps
 So far we have obtained a greater understanding of our task at hand. Because traditional statistical approaches are futile due to the small sample size, it is important to approach our problem from a more qualitative aspect. Thus we will focus on visualization comparisons, and analysis tools instead. Once more data is obtained, we can use the tools we have created to analyze and then create statistically significant data.
@@ -57,7 +57,7 @@ Sahithi please put the links in for the following hw/ipython notebook stuff:
 | Testing Assumptions | [**``./code/test_assumptions.ipynb``**](./code/test_assumptions.ipynb) |
 
 #### Descriptive Analysis
-Answering the descriptive 
+Answering the descriptive questions required looking at the visualized data and comparing the patterns we observed. Because we quickly realized such patterns would not be analyzable due to the subsampled nature of our visuals, we were forced to redraw descriptive analysis questions that focused more on the visuals.
 
 #### Exploratory Analysis
 
