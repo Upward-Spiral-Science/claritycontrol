@@ -18,13 +18,14 @@
 ----------
 
 ### Overview
-Clarity brain imaging can potentially unlock the secrets behind differentiating brain structures in different people.
+Clarity brain imaging will allow rapid extraction of systems information from large and intact biological tissues or organs without disassembly,down to milli-second scale and cellular resolution. Analysing Clarity can potentially unlock the secrets behind the correlation between behaviour and brain structures in different people.
 
 ### Scientific Questioning
-Exploratory and Descriptive Analysis was used to guide the questions that we decided to tackle.
+Exploratory and Descriptive Analysis were used to guide the questions that we decided to tackle. The results from the analysis are discussed in the following sections. 
 
 #### Descriptive Analysis
 Working with the data was relatively difficult due to the computationally intensive nature of the image volumes we tried to tackle. We first created an API to visualize the data. Next we converted the images to a csv representation using sparse sampling. By doing so we were able to understand the nuances involved with the Clarity data like intensity, clusters, etc. 
+We worked with three datasets, Fear , Cocaine and Control with 3 subjects for each. After asking questions about the data such as dataset size, optimal resolution, we understood that the size of a single dataset [500 GB] can be reduced to a manageable size [0.5 GB] by scaling the resolution by a factor of 5.
 
 #### Exploratory Analysis
 After visualizing the Clarity data and understanding where we could potentially generate useful data leads, we explored the images to determine patterns in the intensity of the images.
@@ -35,9 +36,19 @@ Inferential Analysis was unfortunately not as useful for analysis because due to
 #### Predictive Analysis
 Classification was also difficult due to the small sample size. While we went through the traditional sematics of traditional classification, we focused more on the theoretical side of classification.
 
+| Classifier | Accuracy | Standard Deviation |
+|------------|----------|--------------------|
+|Nearest Neighbors | 0.08 | +/- 0.55 |
+|Linear SVM | 0.25 | +/- 0.87 |
+|Random Forest| 0.25 | +/- 0.87 |
+|Linear Discriminant Analysis| 0.25 | +/- 0.87 |
+
+From these results it is clear that no classifier performs well with the data. 
 We changed the bin numbers in hopes of obtaining different results, but unfortunately while the data was indeed different, the data was bad in different ways.
+We then decided to reevaluate the assumptions we made initially to better understand our model. 
 
 #### Testing Assumptions
+We assumed that the data from different datasets was sampled idependently and identically. We tested each of these assumptions to see if we can impove our model.
 The assumptions we took for granted were also not necessarily requiring of deep analysis. Since there are 12 different graphs our study concluded that 12 clusters was the optimal number for example. 
 
 #### Next Steps
