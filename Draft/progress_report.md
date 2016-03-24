@@ -91,9 +91,15 @@ For exploratory analysis we started by looking at the csv files and making predi
 
 #### Inferential Analysis
 We needed to define a model for inferential analysis. Our initial data was composed of a single fear data file and a single control data file, so while actual analysis was not necessary to differentiate - since brains will have differences between themselves regardless of the specific type - we conducted a basic hypothesis test regardless.
+We defined a model based on histogram equalization. We tested out datasets under the null hypothesis with the assumption that each of the models had the same maximum gray value. The alternate hypothesis was defined when the maximum gray values were not similar.
 
 #### Predictive Analysis
-4 different classifiers were used. These classifiers were conducted using scikit's api. This was done in an iterative fashion.
+For predictive analysis we used four different classifiers,both parametric (LDA) and non-parametric (K-nearest neighbour, Linear SVM, and Random Forest). The parameters chosen for each of these algorithms was the default parameters suggested by the sklearn website. Choosing better and more relevant parameters for our data could drastically improve the performance of these classifiers.
+
+Shown below is a figure illustrating the performance of each of these classifiers. It is clear from the figure the classifers would benefit from being tuned specifically to our data. 
+
+<img src="../figs/classification_clarity.png" data-canonical-src="../figs/classification_clarity.png" width="700" />
+
 
 <img src="../figs/classification_clarity.png" data-canonical-src="../figs/classification_clarity.png" width="700" />
 
