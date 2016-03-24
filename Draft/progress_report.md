@@ -101,8 +101,6 @@ Shown below is a figure illustrating the performance of each of these classifier
 <img src="../figs/classification_clarity.png" data-canonical-src="../figs/classification_clarity.png" width="700" />
 
 
-<img src="../figs/classification_clarity.png" data-canonical-src="../figs/classification_clarity.png" width="700" />
-
 #### Testing Assumptions
 Three different assumptions were taken:
     "1. We assume that histograms are sampled according to: $x_i \\stackrel{iid}{\\sim} F$. This is both an independent and identical assumption.\n",
@@ -110,4 +108,4 @@ Three different assumptions were taken:
     "3. We assume there is a class conditional difference across conditions={Control, Cocaine, Fear}.\n",
     "4. In addition, we assume that any other differences of the subjects such as genders, ages will not or have limit affects to the data. (We cannot test on this, because we do not have access to that information.)\n",
     
-    Our results showed that the histograms were indeed sampled independently, that the data points are independent, but that class conditional differences may not exist.
+Our results showed that the histograms were indeed sampled independently, that the data points are independent, but that class conditional differences may not exist.
