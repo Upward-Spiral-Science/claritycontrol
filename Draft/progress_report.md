@@ -67,7 +67,6 @@ So far we have obtained a greater understanding of our task at hand. Because tra
 ### Methods
 The following is the code we have written so far that represents the above categories. Next we will discuss our method for approaching the necessary problems. 
 
-Sahithi please put the links in for the following hw/ipython notebook stuff:
 
 | Question Type | Code |
 |---------------|------|
@@ -87,9 +86,9 @@ Answering the descriptive questions required looking at the visualized data and 
 We needed to defined a model for inferential analysis. 
 
 #### Predictive Analysis
-5 different classifiers were used. 
+4 different classifiers were used. 
 
-Sahithi please insert the classifier graph here:
+<img src="../figs/classification_clarity.png" data-canonical-src="../figs/classification_clarity.png" width="700" />
 
 #### Testing Assumptions
 Three different assumptions were taken - 
