@@ -17,6 +17,7 @@ Taking direction from [CLARITY ROI Analysis] (https://slack-files.com/files-pri-
   * Homogeneity
   * MaxProbability
   * Inverse Variance
+* Visualize CLARITY brains in 3D
 
 
 
