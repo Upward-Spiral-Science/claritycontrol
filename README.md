@@ -34,3 +34,7 @@ Main repository for ClarityControl
 ### Assignment 8
 
 [claritycontrol/Draft/progress_report.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/Draft/progress_report.md)
+
+
+### To do list [4/7/2016]
+[claritycontrol/ToDoList.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ToDoList.md)
