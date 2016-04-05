@@ -24,11 +24,11 @@ Taking direction from [CLARITY ROI Analysis] (https://slack-files.com/files-pri-
 ## Sahithi's Work
 * Visualize CLARITY brains using ITK Snap & ParaView as mentioned in [3D Visualization] (http://f1000research.com/articles/4-466/v1)
 * Calculate above mentioned features for some of the ROIs. 
+* Create api
 
 ## Albert's Work 
-* Calculate above mentioned features for some of the ROIs
-
-
+* Optimize clarity api 
+* Create documentation for modification
 
 ## Wei's Work 
 * Extract ROIs
