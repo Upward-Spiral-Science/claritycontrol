@@ -40,3 +40,5 @@ Main repository for ClarityControl
 [claritycontrol/ToDoList.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ToDoList.md)
 
 [claritycontrol/ExtractROI_Issues.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ExtractROI_Issues.md)
+
+[claritycontrol/assignments/histogramIssues.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/histogramIssues.md)
