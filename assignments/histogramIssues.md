@@ -1,2 +1,2 @@
-I have created a file for histogram equalization, however the program requires a huge amount of runtime so I was unable to produce a jupyter notebook that would not crash when I executed the code. 
+I have created a file (assignments/textureHist.md)[https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/textureHist.py] for histogram equalization, however the program requires a huge amount of runtime so I was unable to produce a jupyter notebook that would not crash when I executed the code. 
 This is the final iteration of the code but there may be errors that will be addressed asap (not all cases were tested yet due to the huge runtime necessary)
