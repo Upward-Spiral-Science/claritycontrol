@@ -38,3 +38,4 @@ Main repository for ClarityControl
 
 ### To do list [4/7/2016]
 [claritycontrol/ToDoList.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ToDoList.md)
+[claritycontrol/ToDoList.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ExtractROI_Issues.md)
