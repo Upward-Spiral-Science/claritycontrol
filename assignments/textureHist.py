@@ -1,4 +1,5 @@
-#IMPORTANT: THE ABOVE PORTION IS A SCRIPT FROM SOLEM'S VISION BLOG
+#IMPORTANT: THE ABOVE PORTION IS A SCRIPT FROM SOLEM'S VISION BLOG 
+# http://www.janeriksolem.net/2009/06/histogram-equalization-with-python-and.html
 
 import SimpleITK as sitk
 
