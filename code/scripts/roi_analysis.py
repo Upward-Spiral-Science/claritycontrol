@@ -3,12 +3,6 @@
 __author__ = 'david'
 from __builtin__ import *
 
-
-#ssh alee@foo.cis.jhu.edu
-#unko1234
-#/cis/project/clarity/data/clarity/level5/
-#scp alee@foo.cis.jhu.edu:/cis/project/clarity/data/clarity/level5/
-
 import gc
 import numpy as np
 from skimage.feature import greycomatrix, greycoprops
