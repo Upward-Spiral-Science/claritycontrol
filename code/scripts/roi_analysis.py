@@ -78,5 +78,5 @@ for roi_id in range(len(atlas_values)):
     features[roi_id, 4] = np.std(roi_block[roi_block != 0])
 
     ## compute GLCM and properties
-    features[roi_id, 5] = 0
-    features[roi_id, 6] = 0
+    # features[roi_id, 5] = 0
+    # features[roi_id, 6] = 0
