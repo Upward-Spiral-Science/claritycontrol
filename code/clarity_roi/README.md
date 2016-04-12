@@ -19,3 +19,4 @@ To run the code:
 
 1. The program will run for a long time before finish, so you may use screen command to hold a session. Detach it while it's running.
 2. The data mat-files are generated from the annotation .nrrd file and clarity .tif files, it use matlab v7.3 format with compression. They are much smaller than the original data files.
+3. The features extracted are stored into a csv file for each of the brains. Each row contains features computed from each ROI. The data in each raw contains 12 features computed in 13 directions, plus the mean, std and roi_ID, so there are 12*13+3 columns.
