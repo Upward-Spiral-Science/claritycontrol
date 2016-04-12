@@ -1,7 +1,6 @@
 *.img
 *.zip
 *.hdr
-*.csv
 *.pyc
 
 .idea/
