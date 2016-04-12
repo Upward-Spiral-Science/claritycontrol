@@ -42,3 +42,7 @@ Main repository for ClarityControl
 [claritycontrol/ExtractROI_Issues.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ExtractROI_Issues.md)
 
 [claritycontrol/assignments/histogramIssues.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/histogramIssues.md)
+
+### Update 4/11/2016
+
+Add roi extraction matlab code [Details](https://github.com/Upward-Spiral-Science/claritycontrol/tree/master/code/clarity_roi)
