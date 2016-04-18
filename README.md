@@ -35,6 +35,9 @@ Main repository for ClarityControl
 
 [claritycontrol/Draft/progress_report.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/Draft/progress_report.md)
 
+### Assignment 9 & 10
+
+> Merge here because raw data preprocessing such as ROI extraction took so much time.
 
 ### To do list [4/7/2016]
 [claritycontrol/ToDoList.md] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ToDoList.md)
@@ -46,3 +49,7 @@ Main repository for ClarityControl
 ### Update 4/11/2016
 
 Add roi extraction matlab code [Details](https://github.com/Upward-Spiral-Science/claritycontrol/tree/master/code/clarity_roi)
+
+### Analysis
+
+[./assignments/a09_extended_exploratory.ipynb](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a09_extended_exploratory.ipynb)
