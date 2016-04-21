@@ -53,3 +53,7 @@ Add roi extraction matlab code [Details](https://github.com/Upward-Spiral-Scienc
 ### Analysis
 
 [./assignments/a09_extended_exploratory.ipynb](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a09_extended_exploratory.ipynb)
+
+### Assignment 11
+
+[./assignments/a11_WeiWang_classfication_analysis.ipynb](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a11_WeiWang_classfication_analysis.ipynb)
