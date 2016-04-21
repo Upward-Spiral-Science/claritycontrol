@@ -1,7 +1,7 @@
+# file suffix
 *.img
 *.zip
 *.hdr
-*.csv
 *.pyc
 
 .idea/
