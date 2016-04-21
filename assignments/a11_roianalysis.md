@@ -10,8 +10,11 @@ Shown below is the figure for ROI 559 which corresponds to the Central amygdalar
 Shown below is the figure for ROI 559 which corresponds to the Paraventricular hypothalamic nucleus parvicellular division medial parvicellular part dorsal zone of the mouse brain.
 
 <img src="../figs/87roi.jpg" data-canonical-src="../figs/87roi.jpg" width="300" />
+*Please ignore the legend colour mixup!
 
 The conditions of study involve Fear and Cocaine, which would typically influence the Amygdala and Hippocampal regions respectively.
 The ROIs that showed a good classfification of data belong in these groups. It seems like an obvious direction to take to further analyse the CLARITY brains. 
 
 Correlation and contrast features were chosen for this intial investigation as they showed a good difference in the analysis done in [assignment_11](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a11_WeiWang_classfication_analysis.ipynb)
+
+We would probably benefit from comparing the two classes individually against the control rather than comparing all three, as fear and cocaine could essentially trigger similar parts in the brain. [Just a thought..]
