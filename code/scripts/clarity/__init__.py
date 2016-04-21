@@ -8,16 +8,13 @@ import resources as rs
 from vispy import app
 from plot import Canvas
 import matplotlib.pyplot as plt
-import pylab as pl
 import gc
-# import random,sys
-# random.seed()
 
 np.random.seed()
 
 class Clarity(object):
     def __init__(self,token,imgfile=None,pointsfile=None):
-        if not (token in rs.TOKENS or token in rs.ANNO_TOKENS):
+        if token not in rs.TOKENS:
             raise ValueError("Token %s not found."%(token))
 
         self._token = token
@@ -28,9 +25,10 @@ class Clarity(object):
         self._shape = None   # (x,y,z)
         self._max = None     # max value
 
-    def loadImg(self,path=None, info=True, presample=1):
+    def loadImg(self, path=None, info=False):
         if path is None:
-            path = rs.DATAPATH
+            path = rs.RAW_DATA_PATH
+
         pathname = path+self._token+".img"
         img = nib.load(pathname)
         if info:
@@ -56,12 +54,12 @@ class Clarity(object):
         if self._img is None:
             raise ValueError("Img haven't loaded, please call loadImg() first.")
 
-        return np.histogram(self._img.flatten(),bins=bins,range=range,density=density)
+        return np.histogram(self._img.flatten(), bins=bins, range=range, density=density)
 
-    def imgToPoints(self,threshold=0.1,sample=0.5,optimize=True):
-        if not 0<=threshold<1:
+    def imgToPoints(self, threshold=0.1, sample=0.5, optimize=True):
+        if not 0 <= threshold < 1:
             raise ValueError("Threshold should be within [0,1).")
-        if not 0<sample<=1:
+        if not 0 < sample <= 1:
             raise ValueError("Sample rate should be within (0,1].")
         if self._img is None:
             raise ValueError("Img haven't loaded, please call loadImg() first.")
@@ -69,10 +67,10 @@ class Clarity(object):
         total = self._shape[0]*self._shape[1]*self._shape[2]
         print("Coverting to points...\ntoken=%s\ntotal=%d\nmax=%f\nthreshold=%f\nsample=%f"\
                %(self._token,total,self._max,threshold,sample))
-        print("(This will take couple minutes.)")
+        print("(This will take couple minutes)")
         # threshold
         filt = self._img > threshold * self._max
-        x,y,z = np.where(filt)
+        x, y, z = np.where(filt)
         v = self._img[filt]
         if optimize:
             self.discardImg()
@@ -89,37 +87,12 @@ class Clarity(object):
         self._points = np.vstack([x,y,z,v])
         self._points = np.transpose(self._points)
         print("Samples=%d"%(self._points.shape[0]))
-
-        # version 2
-        # filter according to threshold & sample
-        # total = self._shape[0]*self._shape[1]*self._shape[2]
-        # print "Coverting to points...\ntoken=%s\ntotal=%d\nmax=%f\nthreshold=%f\nsample=%f"\
-        #       %(self._token,total,self._max,threshold,sample)
-        # sample = min(sample/(1-threshold),1.0)
-        # threshold = self._max * threshold
-        # print "Modified threshold=%f\nModified sample=%f"%(threshold,sample)
-        # temp = []
-        # scanned = 0
-        # collected = 0
-        # for (i,j,k),v in np.ndenumerate(self._img):
-        #     if v > threshold and random.random() <= sample:
-        #         temp.append([i,j,k,np.int16(255*v/self._max)])
-        #         collected+=1
-        #     scanned+=1
-        #     print "\rscanned: %d/%d, collected=%d         "%(scanned,total,collected),
-        #     sys.stdout.flush()
-
-        # version 1
-        # self._points = np.array([[i,j,k,np.int16(255*v/self._max)] \
-        #                          for (i,j,k),v in np.ndenumerate(self._img) \
-        #                          if v > threshold and random.random() <= sample],dtype=np.int16)
-
         print("Finished")
         return self
 
     def loadPoints(self,path=None):
         if path is None:
-            path = rs.POINTSPATH
+            path = rs.POINTS_DATA_PATH
         pathname = path+self._token+".csv"
         self._points = np.loadtxt(pathname,dtype=np.int16,delimiter=',')
         print("Points Loaded: %s"%(pathname))
@@ -128,8 +101,9 @@ class Clarity(object):
     def savePoints(self,path=None):
         if self._points is None:
             raise ValueError("Points is empty, please call imgToPoints() first.")
+
         if path is None:
-            path = rs.POINTSPATH
+            path = rs.POINTS_DATA_PATH
         pathname = path+self._token+".csv"
         np.savetxt(pathname,self._points,fmt='%d',delimiter=',')
         return self
@@ -154,8 +128,6 @@ class Clarity(object):
         return np.interp(self._points[:,3],bins[:-1],cdf)
 
     def showHistogram(self,bins=255):
-        #if self._points is None:
-        #    raise ValueError("Points is empty, please call imgToPoints() first.")
         plt.hist(self._points[:,3],bins=bins)
         plt.title("%s Points Histogram"%(self._token))
         plt.ylabel("count")
@@ -166,6 +138,7 @@ class Clarity(object):
     def show(self):
         if self._points is None:
             raise ValueError("Points is empty, please call imgToPoints() first.")
+
         # centralize
         self.centralize()
         # colors

@@ -3,3 +3,61 @@
   - residuals
   - correlations
   - # modes
+  
+  
+X_i, i∈[n]
+x_i ~iid F -> independent identical 
+x_i∈R
+
+\sum_(ij) = corr(x_i, x_j) x_i ∈ R^d
+
+Methods:
+Correlation is linear and fast-ish
+Scatterplot is nonlinear and fastish
+Check for independence to prove x_i ~iid F
+When you say p value is 0.01 you are saying specifically under a variety of different circumstances
+
+
+What do you expect the correlation matrix to look like under the independent assumption
+- the boxes on the diagonal will be 1
+- If you don't know what your distribution is you can't know your correlation matrix
+
+i vs j plot scatterplot where an arbitrary point will be (x_i, x_j)
+- if uncorrelated will be random 
+- if correlated will be "organized" in some sense
+- Nonlinear relationships are also worth looking into
+
+Assumption checking allows for more exploratory analysis
+
+Partitioning the data rather than random sampling, use clusters of the data
+
+You can cluster and find the quality of fit you can get intuition then you can get info on what is going well
+
+F the distribution must be gaussian (F={N(mu, gauss): M∈R, gauss>0
+Plot the histogram and then compare to gaussian distribution
+Estimate mu hat and theta hat and then plot the gaussian distribution and find how similar they look 
+
+For a 2 dimensional gaussian: Plot a histogram using level curves
+- find the density of various percentiles of each histogram
+= if the data is multimodal then you can tell that the level sets are not good 
+
+When all the data points are not independent then nothing is guaranteed 
+- thus it's helpful that the features are independent
+- to check that the features are independent of d dimensions and n samples, 
+- look at the correlation between the features 
+
+If more than 4 features: Pear plots
+- 4x4 array where the middle rows are 0 and symmetry
+- the rest are correlation plots between each of the features with eachother
+- if there are 20 then you can:
+    Subsample pears
+    
+Non-parametric ways to test independence
+Maa, Pearl, B paper say that if you want to check for indepdence: 
+-H_o = F_xy = F_xF_y
+-H_a = F_xy is not F_xF_y
+  Comparison functions:
+    distance: ||x-y||^2
+    similarity: <x dot product y>
+  if you get enough functions, as n approaches infinity there is a sufficient statstic for H_o regardless of the join distribution
+  R package called energy lets you compute arbitrary non parametric dependencies.
