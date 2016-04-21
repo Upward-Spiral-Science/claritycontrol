@@ -59,3 +59,5 @@ Add roi extraction matlab code [Details](https://github.com/Upward-Spiral-Scienc
 [./assignments/a11_WeiWang_classfication_analysis.ipynb](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a11_WeiWang_classfication_analysis.ipynb)
 
 [./assignments/AdvancedTexture Based Clarity Visualization.ipynb] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/Advanced%20Texture%20Based%20Clarity%20Visualization.ipynb)
+
+[./assignments/a11_roianalysis.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a11_roianalysis.md)
