@@ -7,19 +7,19 @@ The results when we used the Pair of Features technique are plotted in the [matl
 
 <img src="../figs/ROI87/87_StandardDeviation.png" data-canonical-src="../figs/ROI87/87_StandardDeviation.png" />
 
-<img src="../figs/ROI87/87_Energy.png" data-canonical-src="..figs/ROI87/87_Energy.png" />
+<img src="../figs/ROI87/87_Energy.png" data-canonical-src="../figs/ROI87/87_Energy.png" />
 
-<img src="../figs/ROI87/87_Entropy.png" data-canonical-src="../figs/ROI87/87_Entropy.png"/>
+<img src="../figs/ROI87/87_Entropy.png" data-canonical-src="../figs/ROI87/87_Entropy.png" />
 
 <img src="../figs/ROI87/87_Correlation.png" data-canonical-src="../figs/ROI87/87_Correlation.png" />
 
-<img src="..figs/ROI87/87_Contrast.png" data-canonical-src="../figs/ROI87/87_Contrast.png" />
+<img src="../figs/ROI87/87_Contrast.png" data-canonical-src="../figs/ROI87/87_Contrast.png" />
 
 <img src="../figs/ROI87/87_Variance.png" data-canonical-src="../figs/ROI87/87_Variance.png"  />
 
 <img src="../figs/ROI87/87_SumMean.png" data-canonical-src="../figs/ROI87/87_SumMean.png"  />
 
-<img src="..figs/ROI87/87_Inertia.png" data-canonical-src="../figs/ROI87/87_Inertia.png"  />
+<img src="../figs/ROI87/87_Inertia.png" data-canonical-src="../figs/ROI87/87_Inertia.png"  />
 
 <img src="../figs/ROI87/87_ClusterShade.png" data-canonical-src="../figs/ROI87/87_ClusterShade.png"  />
 
