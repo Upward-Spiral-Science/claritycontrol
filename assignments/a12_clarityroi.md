@@ -31,4 +31,12 @@ The results when we used the Pair of Features technique are plotted in the [matl
 
 <img src="../figs/ROI87/87_InverseVariance.png" data-canonical-src="../figs/ROI87/87_InverseVariance.png" />
 
-The next step, or the final step would be to run this analysis on every ROI previously extracted and hopefully classify the brains. 
+
+Successful Classification was found in the following pairs:
+* Contrast vs Cluster Shade 
+* Inverse Variance vs Contrast 
+* Inertia vs Contrast
+* Cluster Shade vs Standard Deviation 
+* Contrast vs Standard Deviation
+
+The next step, or the final step would be to run a similar analysis on every ROI previously extracted and further classify the brains. 
