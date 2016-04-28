@@ -5,7 +5,7 @@ The results when we used the Pair of Features technique are plotted in the [matl
 
 <img src="../figs/ROI87/87_Mean.png" data-canonical-src="../figs/ROI87/87_Mean.png" />
 
-<img src="../figs/ROI87/87_StandardDeviation.png" data-canonical-src="../figs/ROI87/87_StandardDeviation.png" />
+<img src="../figs/ROI87/87_Standard Deviation.png" data-canonical-src="../figs/ROI87/87_Standard Deviation.png" />
 
 <img src="../figs/ROI87/87_Energy.png" data-canonical-src="../figs/ROI87/87_Energy.png" />
 
