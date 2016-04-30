@@ -60,14 +60,6 @@ It is believed that the findings could uncover new brain circuits involved in dr
 
 ## CLARITY Image Dataset
 
-TODO:
-* Description about the datasets, tables
-* Format & Atlas
-* Introduce how to Load data
-* Plots
-* Visualization
-* Adapting computational resources
-
 The CLARITY dataset we obtained contains 15 CLARITY samples. Each sample is a 3d image in only one channel (grayscale) with on of three labels, control, cocaine and fear. The dataset is getting from one of the server in Center For Imaging Science.[3] We found two sets of the CLARITY data, one is raw data in nifti format, the other is in tif which has been manipulated and registered on Allen Mouse Brain Atlas. This will be explained in a moment, let's first look at the basic description of the data.
 
 **Table of CLARITY data information**
@@ -141,7 +133,7 @@ It is nature to think about visualize the data directly in 3D to have a look at 
 
 ![CLARITY 3D visualization 2](https://raw.githubusercontent.com/Upward-Spiral-Science/claritycontrol/master/figs/final_report/clarity3d2.png)
 
-> Note there are some required packages need to be installed in order to run the visualization api. The packages including PyQt4, SIP, numpy, vispy, etc.
+> Note there are some required packages need to be installed in order to run the visualization api. The packages including PyQt4, SIP, numpy, vispy, nibabel etc.
 
 ## Histogram
 
