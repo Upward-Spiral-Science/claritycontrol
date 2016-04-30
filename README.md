@@ -64,3 +64,6 @@ Add roi extraction matlab code [Details](https://github.com/Upward-Spiral-Scienc
 
 ### Assignment 12
 [./assignments/a12_clarityroi.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a12_clarityroi.md) 
+
+### Final Report
+[./assignments/final_report.md](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a12_clarityroi.md)
