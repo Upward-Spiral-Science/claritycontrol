@@ -1,6 +1,6 @@
 # CLARITY Control: Final report (Draft)
 
-> Wei Wang
+> Wei Wang, Albert Lee, Sahithi
 
 
 
@@ -8,7 +8,7 @@
 
 
 
-> This is an informal report, reference will be provided as clear as possible.
+> This is an informal report, references will be provided to be as clear as possible.
 
 ## Abstract
 TODO: finish this at the end
@@ -17,14 +17,14 @@ TODO: finish this at the end
 
 **CLARITY introduction**
 
-CLARITY is a technique developed to transform an intact tissue into an optically transparent and permeable hydrogel-hybridized form that can undergo immunostaining and high resolution 3-D imaging without damage to the sample. Facing the difficulty of getting both detailed structural and molecular information from intact tissues in studying biological system, it is desired to find way which could help researchers "look through" the tissues with details. CLARITY provides visualization of long-range cellular projections for three-dimensional tissue mapping of a variety of tissue types with the following benefits:[^1]
+CLARITY is a technique developed to transform intact tissue into an optically transparent and permeable hydrogel-hybridized form that can undergo immunostaining and high resolution 3-D imaging without damage to the sample. Solving the difficulty of obtaining detailed structural and molecular information from intact tissues, CLARITY provides visualization of long-range cellular projections for three-dimensional tissue mapping with the following benefits:[^1]
 
 1. No damage or thin sectioning required to visualize whole intact tissue samples
 2. Allows marking and visualization of long-range projections and subcellular structures
 3. Allows multiple rounds of molecular phenotyping
 4. Applicable to multiple tissue types and sizes
 
-CLARITY has been proved to be an viable method to explore tissues and has been successfully applied to clearing mouse brain, human brain slices, mouse spinal cord.
+CLARITY has been proved to be a viable method to explore tissues and has been successfully applied to mouse brains, human brain slices, and mouse spinal cords.
 
 **Overview of the work**
 
@@ -136,6 +136,25 @@ It is nature to think about visualize the data directly in 3D to have a look at 
 > Note there are some required packages need to be installed in order to run the visualization api. The packages including PyQt4, SIP, numpy, vispy, nibabel etc.
 
 ## Histogram
+
+A variety of histogram techniques were used to analyze the data. Using the Clarity API obtaining histograms is simple. 
+
+```python
+import nibabel as nib
+import os
+PATH="/Users/albertlee/claritycontrol/code/scripts/" # use your own path
+os.chdir(PATH)
+
+import clarity as cl 
+import matplotlib.pyplot as plt
+import jgraph as ig
+
+c = cl.Clarity("Fear199") # use the token corresponding to the wanted data
+c.loadImg().imgToPoints(threshold=0.02,sample=0.3).showHistogram(bins=256) # adjust the threshold, sample, and bin number to the desired parameters
+
+```
+
+Applying local histogram equalization is a more complicated process, but can be accomplished with our _____ script.
 
 ## ROI Extraction and Features building
 TODO:
