@@ -133,16 +133,19 @@ It is nature to think about visualize the data directly in 3D to have a look at 
 
 ![CLARITY 3D visualization 2](https://raw.githubusercontent.com/Upward-Spiral-Science/claritycontrol/master/figs/final_report/clarity3d2.png)
 
-> Note there are some required packages need to be installed in order to run the visualization api. The packages including PyQt4, SIP, numpy, vispy, nibabel etc.
+> Note: there are some required packages need to be installed in order to run the visualization api. The packages including PyQt4, SIP, numpy, vispy, nibabel etc.
 
 ## Histogram
 
 A variety of histogram techniques were used to analyze the data. Using the Clarity API obtaining histograms is simple. 
 
+> Note: All the data directories and tokens are defined in `clarity/resources` and have default setting. The following code assumes the raw nifti dataset is stored in `WORKDIR/../data/raw`. Change it if this doesn't apply to you.
+
 ```python
 import nibabel as nib
 import os
-PATH="/Users/albertlee/claritycontrol/code/scripts/" # use your own path
+# change working dir, use your own path
+PATH="/Users/albertlee/claritycontrol/code/scripts/"
 os.chdir(PATH)
 
 import clarity as cl 
@@ -151,8 +154,21 @@ import jgraph as ig
 
 c = cl.Clarity("Fear199") # use the token corresponding to the wanted data
 c.loadImg().imgToPoints(threshold=0.02,sample=0.3).showHistogram(bins=256) # adjust the threshold, sample, and bin number to the desired parameters
-
 ```
+
+The following shows the histogram from 3 raw CLARITY images in different conditions.
+
+![Fear199 Histogram](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/hist_fear199.png?raw=true)
+
+![Control239 Histogram](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/hist_control239.png?raw=true)
+
+![Cocaine174 Histogram](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/hist_cocaine174.png?raw=true)
+
+The raw image values are rescaled to 0-255 in order to visualize, however the histogram shows how those values are distributed. Data are sampled using a certain sample rate and small value or noise data are dropped using a threshold. From the figures its hard to tell apart between different samples.
+
+
+
+**Histogram Equalization**
 
 Applying local histogram equalization is a more complicated process, but can be accomplished with our _____ script.
 
@@ -162,6 +178,8 @@ TODO:
 2. ROI extraction
 3. features building
 4. Heat map
+
+
 
 ## Exploring ROI Features
 
