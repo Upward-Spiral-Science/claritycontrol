@@ -1,10 +1,6 @@
-# CLARITY Control: Final report (Draft)
+# CLARITY Control: Final report
 
 > Wei Wang, Albert Lee, Sahithi
->
-> NOTE: all CLARITY should use capital letters when it refer to CLARITY technique
->
-> This is an informal report, references will be provided to be as clear as possible.
 
 [TOC]
 
@@ -36,10 +32,6 @@ Psychiatric disease represents the leading cause of disability both in the U.S. 
 **Feasibility**
 
 In preserving the full continuity of neuronal structures, CLARITY not only allows tracing individual neural connections over long distances through the brain, but also provides a way to gather rich, molecular information describing a cell's function that is not possible with other methods[^4]. In this project, we expect to establish at least one parametric structural difference in response to fear between normal and diseased brains. Although CLARITY data is of immense benefit to the field of neuroscience, turning massive amounts of data into useful insight poses immense computational challenges that we will have to address.
-
-**Report organization**
-
-TODO: finish at the end
 
 ## Related Work
 
@@ -177,7 +169,7 @@ From the histogram graph, we could find that the values tend to be concentrate w
 
 **Indpendence of histograms**
 
-![histograms](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/histograms-covariance.png?raw=true)
+![histograms covariance](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/histograms-covariance.png?raw=true)
 
 Ratio of on- and off-diagonal determinants: 0.289106140272.
 
@@ -185,42 +177,96 @@ The figure shows that the histograms are not very independent which makes it har
 
 **Classification on histograms**
 
-We select the parts 
+For classification, we cut off the parts containing the majority data. And run classification algorithms on it. The classification results indicate the histograms of the samples are not good for classification.
+
+*Classification results*
+
+|            Method            | Accuracy | +/-  |
+| :--------------------------: | :------- | ---- |
+|      Nearest Neighbors       | 0.00     | 0.00 |
+|          Linear SVM          | 0.33     | 0.94 |
+|        Random Forest         | 0.07     | 0.50 |
+| Linear Discriminant Analysis | 0.47     | 0.47 |
 
 **Histogram Equalization**
 
 Applying local histogram equalization is a more complicated process, but can be accomplished with our _____ script.
 
 ## ROI Extraction and Features building
-TODO:
-1. ROI and Atlas
-2. ROI extraction
-3. features building
-4. Heat map
+From the histogram of raw datasets, it's hard to do classification. One reason is that the histograms lose a lot of structure information and the distribution tends to be similar which makes it hard to classify. Therefore it might be helpful to compare each sample with structure information. We use the term region of interest (ROI) to refer a certain region in the brain, the region can be defined as a structural part or functional part of the brain. Each ROI has an identical number as an annotation, the annotations are marked in AMBA.
 
-
-From the histogram of raw datasets, it's hard to do classification. One reason is that the histograms lose a lot of structure information and the distribution tends to be similar and hard to classify. Therefore it might be helpful to compare each sample with structure information. We use the term region of interest (ROI) to refer a certain region in the brain, the region can be defined as a structural part or functional part of the brain. Each ROI has an identical number as an annotation, the annotations are marked in AMBA.
+> This analysis is based on part of CLARITYDataAnalysis Project.
+>
+> However, the matlab code used in the original project is very inefficient, requires too much memory and takes very long time to finish. The main focus here is largely rewrite the code and fit it into smaller memory and run faster. You may find there are many programming optimizations crafted in the [code](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/code/clarity_roi/main.m).
 
 **ROI extraction**
 
-
+The workflow of ROI extraction consists of several steps. First, use z standarded normalization to normalize the data. Then build the binary mask from the AMBA atlas image and use the mask to mask out certain region from the data. Then find the bounding box of the region, all the features will be calculated in this bounding box.
 
 **Build Haralick features**
 
+Main features built from each region are Haralick features.[6] It consists of 12 features, stored in a table along with other information. The description of the final built features data is the following:
 
+1. class label [0=cocaine | 1=control | 2=fear]
+2. brain number
+3. roi number
+4. roi position X
+5. roi position Y
+6. roi position Z
+7. roi mean
+8. roi std
+9. Haralick feature - Energy
+10. Haralick feature - Entropy
+11. Haralick feature - Correlation
+12. Haralick feature - Contrast
+13. Haralick feature - Variance
+14. Haralick feature - SumMean
+15. Haralick feature - Inertia
+16. Haralick feature - Cluster Shade
+17. Haralick feature - Cluster tendency
+18. Haralick feature - Homogeneity
+19. Haralick feature - MaxProbability
+20. Haralick feature - Inverse Variance
 
 ## Exploring ROI Features
 
-TODO:
+**Look into the features**
 
-1. Heat map
-2. Covariance
-3. Classification
-4. Pair plot and classification
+After building all the features of each region from each sample, it's time to look into the features. The figure below indicate the features on each region across samples.
 
-![histograms](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/roi-258-features-covariance.png?raw=true)
+*ROI features*
+![ROI features](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/roi_features.png?raw=true)
+
+The following figures shows the features in 3D space. The size of the points indicates the magnitude of the feature values.
+
+*ROI features 3D plot*
+![ROI features 3d 173](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/roi-features-3d-173.png?raw=true)
+
+**Independence of features**
+
+Because the features are related to both samples and regions, it seems to be more reasonable to compare the same region of different samples. After testing all the regions, we find the ROI 258 has the largest independence. The covariance is shown below:
+
+![ROI 258 features covariance](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/roi-258-features-covariance.png?raw=true)
+
+Ratio of on- and off-diagonal determinants: 2.3949709038.
+
+**Classification**
+
+Extracting the ROI 258 data and running classification on it. The classification results are the following:
+
+*Classification results*
+
+|         Method         | Accuracy | +/-  |
+| :--------------------: | :------- | ---- |
+|   Nearest Neighbors    | 0.20     | 0.80 |
+|       Linear SVM       | 0.33     | 0.94 |
+|     Random Forest      | 0.20     | 0.80 |
+|  Linear Discriminant   | 0.47     | 1.00 |
+| Quadratic Discriminant | 0.47     | 1.00 |
 
 ## Future Work
+
+TODO: finish this at the end
 
 ## Resources and Reference
 
@@ -229,6 +275,7 @@ TODO:
 3. JHU Center For Imaging Science: http://www.cis.jhu.edu/index.php 
 4. Marx V. Microscopy: seeing through tissue[J]. Nat. Methods, 2014, 11(12): 1209-1214.
 5. Chung K, Wallace J, Kim S Y, et al. Structural and molecular interrogation of intact biological systems[J]. Nature, 2013, 497(7449): 332-337.
+6. Haralick, Robert M., Karthikeyan Shanmugam, and Its' Hak Dinstein. "Textural features for image classification." *Systems, Man and Cybernetics, IEEE Transactions on* 6 (1973): 610-621.
 
 [^1]: http://wiki.claritytechniques.org/index.php/CLARITY_Technique
 
