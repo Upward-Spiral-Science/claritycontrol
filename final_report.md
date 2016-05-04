@@ -1,16 +1,15 @@
 # CLARITY Control: Final report (Draft)
 
 > Wei Wang, Albert Lee, Sahithi
-
-
-
+>
 > NOTE: all CLARITY should use capital letters when it refer to CLARITY technique
-
-
-
+>
 > This is an informal report, references will be provided to be as clear as possible.
 
+[TOC]
+
 ## Abstract
+
 TODO: finish this at the end
 
 ## Overview
@@ -133,6 +132,8 @@ It is nature to think about visualize the data directly in 3D to have a look at 
 
 ![CLARITY 3D visualization 2](https://raw.githubusercontent.com/Upward-Spiral-Science/claritycontrol/master/figs/final_report/clarity3d2.png)
 
+The visualization shows the scatter plot in a 3D space. The size of the points indicates the magnitude of the value. The color (RGB) represent how far each point is from the original point in three directions.
+
 > Note: there are some required packages need to be installed in order to run the visualization api. The packages including PyQt4, SIP, numpy, vispy, nibabel etc.
 
 ## Histogram
@@ -166,7 +167,25 @@ The following shows the histogram from 3 raw CLARITY images in different conditi
 
 The raw image values are rescaled to 0-255 in order to visualize, however the histogram shows how those values are distributed. Data are sampled using a certain sample rate and small value or noise data are dropped using a threshold. From the figures its hard to tell apart between different samples.
 
+The following figures shows the histogram distributions of each sample. Sample from different classes are plotted using different color.
 
+![histograms](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/histograms.png?raw=true)
+
+From the histogram graph, we could find that the values tend to be concentrate within a certain range. And there are some difference between different classes, however it's still not very distinguish.
+
+> Link to the [code and histograms files](https://github.com/Upward-Spiral-Science/claritycontrol/tree/master/code/data/hist).
+
+**Indpendence of histograms**
+
+![histograms](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/histograms-covariance.png?raw=true)
+
+Ratio of on- and off-diagonal determinants: 0.289106140272.
+
+The figure shows that the histograms are not very independent which makes it hard to be classified.
+
+**Classification on histograms**
+
+We select the parts 
 
 **Histogram Equalization**
 
@@ -180,10 +199,26 @@ TODO:
 4. Heat map
 
 
+From the histogram of raw datasets, it's hard to do classification. One reason is that the histograms lose a lot of structure information and the distribution tends to be similar and hard to classify. Therefore it might be helpful to compare each sample with structure information. We use the term region of interest (ROI) to refer a certain region in the brain, the region can be defined as a structural part or functional part of the brain. Each ROI has an identical number as an annotation, the annotations are marked in AMBA.
+
+**ROI extraction**
+
+
+
+**Build Haralick features**
+
+
 
 ## Exploring ROI Features
 
-## Conclusions
+TODO:
+
+1. Heat map
+2. Covariance
+3. Classification
+4. Pair plot and classification
+
+![histograms](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/final_report/roi-258-features-covariance.png?raw=true)
 
 ## Future Work
 
