@@ -6,8 +6,8 @@
 **Table of Contents:**
 - [Abstract](./final_report.md#abstract)
 - [Overview](./final_report.md#overview)
-- [Related Work](./final_report.md#related work)
-- [CLARITY Image Dataset](./final_report.md#clarity image dataset)
+- [Related Work](./final_report.md#relatedwork)
+- [CLARITY Image Dataset](./final_report.md#clarityimagedataset)
 - [Scientific Questioning](./final_report.md#scientific-questioning)
   - [Decriptive Analysis](./final_report.md#descriptive-analysis)
   - [Exploratory Analysis](./final_report.md#exploratory-analysis)
