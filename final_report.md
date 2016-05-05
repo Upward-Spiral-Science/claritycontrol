@@ -2,7 +2,26 @@
 
 > Wei Wang, Albert Lee, Sahithi
 
-[TOC]
+-------
+**Table of Contents:**
+- [Overview](./final_report.md#overview)
+- [Scientific Questioning](./final_report.md#scientific-questioning)
+  - [Decriptive Analysis](./final_report.md#descriptive-analysis)
+  - [Exploratory Analysis](./final_report.md#exploratory-analysis)
+  - [Inferential Analysis](./final_report.md#inferential-analysis)
+  - [Predictive Analysis](./final_report.md#predictive-analysis)
+  - [Testing Assumptions](./final_report.md#testing-assumptions)
+  - [Extended Exploratory Analysis](./final_report.md#extended-exploratory-analysis)
+  - [Dimensionality Reduction](./final_report.md#dimensionality-reduction)
+- [Methods](./final_report.md#methods)
+  - [Decriptive Analysis](./final_report.md#descriptive-analysis-1)
+  - [Exploratory Analysis](./final_report.md#exploratory-analysis-1)
+  - [Inferential Analysis](./final_report.md#inferential-analysis-1)
+  - [Predictive Analysis](./final_report.md#predictive-analysis-1)
+  - [Testing Assumptions](./final_report.md#testing-assumptions-1)
+  - [Extended Exploratory Analysis](./final_report.md#extended-exploratory-analysis-1)
+  - [Dimensionality Reduction](./final_report.md#dimensionality-reduction-1)
+----------
 
 ## Abstract
 
