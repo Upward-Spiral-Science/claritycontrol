@@ -285,7 +285,7 @@ Extracting the ROI 258 data and running classification on it. The classification
 
 ## Future Work
 
-TODO: finish this at the end
+In the near future, we plan to turn the scripts and APIs we developed into a independent set of web tools that are simple to use and require no prior coding experience to develop. Currently we are working with Django and hope to deploy the tools by the end of Summer 2016. 
 
 ## Resources and Reference
 
