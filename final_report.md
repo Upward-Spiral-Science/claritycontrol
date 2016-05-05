@@ -25,7 +25,7 @@
 
 ## Abstract
 
-TODO: finish this at the end
+Because of the small sample size of the data, running tests and classificatotion algorithms was an exercise in futitility when trying to extract statistically significant data. Instead, this semester we created a series of tools and methods to analyze Clarity images. When more data is available, our tools will be usable to supplement a more rigorous study.
 
 ## Overview
 
