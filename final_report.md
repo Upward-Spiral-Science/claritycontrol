@@ -9,6 +9,7 @@
 - [Related Work](./final_report.md#related-work)
 - [CLARITY Image Dataset](./final_report.md#clarity-image-dataset)
 - [Histogram](./final_report.md#histogram)
+- [ROI Extraction and Features building](./final_report.md#roi-extraction-and-features-building)
 - [Scientific Questioning](./final_report.md#scientific-questioning)
   - [Decriptive Analysis](./final_report.md#descriptive-analysis)
   - [Exploratory Analysis](./final_report.md#exploratory-analysis)
