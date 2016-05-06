@@ -259,6 +259,7 @@ We further studyied the ROI 87, that corresponds to Paraventricular hypothalamic
 The results when we used the Pair of Features technique are plotted in the [matlab script] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/code/data/MATLAB%20files/clarityroi3.m).
 
 <img src="../figs/ROI87/87_Mean.png" data-canonical-src="../figs/ROI87/87_Mean.png" />
+
 <img src="../figs/ROI87/87_Standard Deviation.png" data-canonical-src="../figs/ROI87/87_Standard Deviation.png" />
 
 <img src="../figs/ROI87/87_Energy.png" data-canonical-src="../figs/ROI87/87_Energy.png" />
@@ -294,10 +295,9 @@ The results when we used the Pair of Features technique are plotted in the [matl
 <img src="../figs/ROI87/87_MaxProbability.png" data-canonical-src="../figs/ROI87/87_MaxProbability.png"/>
 
 
+
+
 <img src="../figs/ROI87/87_InverseVariance.png" data-canonical-src="../figs/ROI87/87_InverseVariance.png"/>
-
-
-
 **Independence of features**
 
 Because the features are related to both samples and regions, it seems to be more reasonable to compare the same region of different samples. After testing all the regions, we find the ROI 258 has the largest independence. The covariance is shown below:
