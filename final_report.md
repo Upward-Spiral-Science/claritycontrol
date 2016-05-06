@@ -2,7 +2,6 @@
 
 > Wei Wang, Albert Lee, Sahithi
 
--------
 **Table of Contents:**
 - [Abstract](./final_report.md#abstract)
 - [Overview](./final_report.md#overview)
@@ -13,8 +12,6 @@
 - [Exploring ROI Features](./final_report.md#exploring-roi-features)
 - [Future Work](./final_report.md#future-work)
 - [Resources and Reference](./final_report.md#resources-and-reference)
-
-----------
 
 ## Abstract
 
@@ -260,7 +257,7 @@ The results when we used the Pair of Features technique are plotted in the [matl
 
 
 ![ROI87_Mean.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Mean.png?raw=true) 
-![ROI87_Standard Deviation.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Standard Deviation?raw=true) 
+![ROI87_Standard Deviation.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Standard Deviation.png?raw=true) 
 ![87_Energy.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Energy.png?raw=true) 
 ![87_Entropy.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Entropy.png?raw=true) 
 ![87_Correlation.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Correlation.png?raw=true) 
