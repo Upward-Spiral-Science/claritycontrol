@@ -259,33 +259,22 @@ We further studyied the ROI 87, that corresponds to Paraventricular hypothalamic
 The results when we used the Pair of Features technique are plotted in the [matlab script] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/code/data/MATLAB%20files/clarityroi3.m).
 
 
-[ROI87_Mean.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Mean.png?raw=true) 
+![ROI87_Mean.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Mean.png?raw=true) 
+![ROI87_Standard Deviation.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Standard Deviation?raw=true) 
+![87_Energy.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Energy.png?raw=true) 
+![87_Entropy.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Entropy.png?raw=true) 
+![87_Correlation.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Correlation.png?raw=true) 
+![87_Contrast.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Contrast.png?raw=true) 
+![87_Variance.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Variance.png?raw=true) 
+![87_SumMean.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_SumMean.png?raw=true) 
+![87_Inertia.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Inertia.png?raw=true) 
+![87_ClusterShade.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_ClusterShade.png?raw=true) 
+![87_ClusterTendency.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_ClusterTendency.png?raw=true) 
+![87_Homogeneity.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Homogeneity.png?raw=true) 
+![87_MaxProbability.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_MaxProbability.png?raw=true) 
+![87_InverseVariance.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_InverseVariance.png?raw=true) 
 
-<img src="../figs/ROI87/87_Standard Deviation.png" data-canonical-src="../figs/ROI87/87_Standard Deviation.png" />
 
-<img src="../figs/ROI87/87_Energy.png" data-canonical-src="../figs/ROI87/87_Energy.png" />
-
-<img src="../figs/ROI87/87_Entropy.png" data-canonical-src="../figs/ROI87/87_Entropy.png" />
-
-<img src="../figs/ROI87/87_Correlation.png" data-canonical-src="../figs/ROI87/87_Correlation.png" />
-
-<img src="../figs/ROI87/87_Contrast.png" data-canonical-src="../figs/ROI87/87_Contrast.png" />
-
-<img src="../figs/ROI87/87_Variance.png" data-canonical-src="../figs/ROI87/87_Variance.png"  />
-
-<img src="../figs/ROI87/87_SumMean.png" data-canonical-src="../figs/ROI87/87_SumMean.png"  />
-
-<img src="../figs/ROI87/87_Inertia.png" data-canonical-src="../figs/ROI87/87_Inertia.png"  />
-
-<img src="../figs/ROI87/87_ClusterShade.png" data-canonical-src="../figs/ROI87/87_ClusterShade.png"  />
-
-<img src="../figs/ROI87/87_ClusterTendency.png" data-canonical-src="../figs/ROI87/87_ClusterTendency.png"  />
-
-<img src="../figs/ROI87/87_Homogeneity.png" data-canonical-src="../figs/ROI87/87_Homogeneity.png"/>
-
-<img src="../figs/ROI87/87_MaxProbability.png" data-canonical-src="../figs/ROI87/87_MaxProbability.png"  />
-
-<img src="../figs/ROI87/87_InverseVariance.png" data-canonical-src="../figs/ROI87/87_InverseVariance.png" />
 
 **Independence of features**
 
