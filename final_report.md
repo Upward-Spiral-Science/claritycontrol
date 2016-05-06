@@ -259,9 +259,9 @@ We further studyied the ROI 87, that corresponds to Paraventricular hypothalamic
 The results when we used the Pair of Features technique are plotted in the [matlab script] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/code/data/MATLAB%20files/clarityroi3.m).
 
 
-    <img src="../figs/ROI87/87_Mean.png" data-canonical-src="../figs/ROI87/87_Mean.png" />
+[ROI87_Mean.png](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/figs/ROI87/87_Mean.png?raw=true) 
 
-    <img src="../figs/ROI87/87_Standard Deviation.png" data-canonical-src="../figs/ROI87/87_Standard Deviation.png" />
+<img src="../figs/ROI87/87_Standard Deviation.png" data-canonical-src="../figs/ROI87/87_Standard Deviation.png" />
 
 <img src="../figs/ROI87/87_Energy.png" data-canonical-src="../figs/ROI87/87_Energy.png" />
 
