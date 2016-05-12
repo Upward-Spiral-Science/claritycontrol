@@ -11,12 +11,10 @@ Main repository for ClarityControl
 [**``./assignments/a02_questions.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a02_questions.md)
   > Asking the 6 types of scientific questions about my project topic
   
+IMPORTANT NOTE: Because of an Ndio bug, we were not able to get the data thus our group was severely sidetracked. This was discussed with Jovo and he gave us the data after Assignment 3 and we were told to answer the questions we made to the best of our ability and to add new questions instead of the original assignment.
 ### Assignment 3
 [**``./assignments/a03_descriptive_and_exploratory_answers.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a03_descriptive_and_exploratory_answers.md)
   > Begin answering my descriptive and exploratory questions. Once I've answered them I will go back and revise the questions I asked - discuss those I couldn't fully answer, ask follow up questions that would be informative, etc.
-
-[**``./draft/revised_questions.md``**](./draft/revised_questions.md)
-  > Updated the questions based on our initial analysis
   
 ### Assignment 4
 [**``./assignments/a04_inferential_simulation.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a04_inferential_simulation.ipynb)
