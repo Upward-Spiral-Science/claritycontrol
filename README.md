@@ -42,35 +42,46 @@ IMPORTANT NOTE: Because of an Ndio bug, we were not able to get the data thus ou
 
 ### To do list [4/7/2016]
 [**``./docs/ToDoList.md``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ToDoList.md)
-
+  > Our to do list for the next week
+  
 [**``./docs/ExtractROI_Issues.md``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ExtractROI_Issues.md)
-
+  > Problems we ran into with ROI extraction
+  
 [**``./draft/histogramIssues.md``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/histogramIssues.md)
-
+  > Problems we rain into with histogram equalization
+  
 [**``./code/a09_preliminary_analysis.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/code/a09_preliminary_analysis.ipynb)
+  > Additional exploratory analysis
 
 
 ### Update 4/11/2016
 
 Add roi extraction matlab code [**``Details``**](https://github.com/Upward-Spiral-Science/claritycontrol/tree/master/code/clarity_roi)
-
+  > Link to the matlab code used for extended exploratory analysis
+  
 [**``./code/a10_extended_exploratory.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a10_extended_exploratory.ipynb)
+  > Exploratory analysis conducted even further
 
 ### Assignment 11
 
 [**``./code/a11_roianalysis.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a11_roianalysis.md)
-
+  > Additional roianalysis as directed by Jovo
+  
 ### Assignment 12
 
 [**``./code/a12_classfication_analysis.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a12_classfication_analysis.ipynb)
+  > Additional classification analysis
 
 [**``./code/AdvancedTexture Based Clarity Visualization.ipynb``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/Advanced%20Texture%20Based%20Clarity%20Visualization.ipynb)
+  > Histogram equalization
 
 ### Assignment 13
 
 [**``./code/a13_clarityroi.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a13_clarityroi.md) 
-
+  > More advanced ROI analysis
+  
 [**``./code/a13_more_analysis.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a13_more_analysis.ipynb) 
+  > Further analysis of ROI
 
 ### Assignment 14
 [**``./final_report.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/final_report.md)
