@@ -41,9 +41,9 @@ IMPORTANT NOTE: Because of an Ndio bug, we were not able to get the data thus ou
 > Merge here because raw data preprocessing such as ROI extraction took so much time.
 
 ### To do list [4/7/2016]
-[**``./ToDoList.md``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ToDoList.md)
+[**``./docs/ToDoList.md``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ToDoList.md)
 
-[**``./ExtractROI_Issues.md``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ExtractROI_Issues.md)
+[**``./docs/ExtractROI_Issues.md``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/ExtractROI_Issues.md)
 
 [**``./draft/histogramIssues.md``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/histogramIssues.md)
 
