@@ -53,20 +53,26 @@ Main repository for ClarityControl
 
 Add roi extraction matlab code [**``Details``**](https://github.com/Upward-Spiral-Science/claritycontrol/tree/master/code/clarity_roi)
 
+[**``./assignments/a10_extended_exploratory.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a10_extended_exploratory.ipynb)
+
 ### Assignment 11
-
-[**``./assignments/a09_extended_exploratory.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a09_extended_exploratory.ipynb)
-
-### Assignment 12
-
-[**``./assignments/a11_WeiWang_classfication_analysis.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a11_WeiWang_classfication_analysis.ipynb)
-
-[**``./assignments/AdvancedTexture Based Clarity Visualization.ipynb``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/Advanced%20Texture%20Based%20Clarity%20Visualization.ipynb)
 
 [**``./assignments/a11_roianalysis.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a11_roianalysis.md)
 
+### Assignment 12
+
+[**``./assignments/a12_classfication_analysis.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a12_classfication_analysis.ipynb)
+
+[**``./assignments/AdvancedTexture Based Clarity Visualization.ipynb``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/Advanced%20Texture%20Based%20Clarity%20Visualization.ipynb)
+
+[**``./assignments/a12_roianalysis.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a12_roianalysis.md) 
+
 ### Assignment 13
-[**``./assignments/a12_clarityroi.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a12_clarityroi.md) 
+
+[**``./assignments/a13_clarityroi.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a13_clarityroi.md) 
+
+[**``./assignments/a13_more_analysis.ipynb``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a13_more_analysis.ipynb) 
 
 ### Assignment 14
 [**``./assignments/final_report.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/final_report.md)
+  > Final report summarizing all of our work
