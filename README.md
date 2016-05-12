@@ -65,8 +65,6 @@ Add roi extraction matlab code [**``Details``**](https://github.com/Upward-Spira
 
 [**``./assignments/AdvancedTexture Based Clarity Visualization.ipynb``**] (https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/Advanced%20Texture%20Based%20Clarity%20Visualization.ipynb)
 
-[**``./assignments/a12_roianalysis.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a12_roianalysis.md) 
-
 ### Assignment 13
 
 [**``./assignments/a13_clarityroi.md``**](https://github.com/Upward-Spiral-Science/claritycontrol/blob/master/assignments/a13_clarityroi.md) 
