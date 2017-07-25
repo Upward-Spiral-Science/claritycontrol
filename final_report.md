@@ -3,7 +3,7 @@
 > Wei Wang, Albert Lee, Sahithi
 
 **Table of Contents:**
-- [Abstract](./final_report.md#abstract)
+- [Abstract](./final_report.md##abstract)
 - [Overview](./final_report.md#overview)
 - [Related Work](./final_report.md#related-work)
 - [CLARITY Image Dataset](./final_report.md#clarity-image-dataset)
